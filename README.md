@@ -27,12 +27,12 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 GROUP PHOTO. Add a group photo here.
 
-- Group member 1, name, email, role
-- Group member 2, name, email, role
-- Group member 3, name, email, role
-- Group member 4, name, email, role
-- Group member 5, name, email, role
-- Group member 6, name, email, role
+- Group member 1, Yi Lin, adai08823@gmail.com, role
+- Group member 2, Chuhang Li, zgndylch@163.com, role
+- Group member 3, Yuxuan Cheng, chengyx0921@outlook.com, role
+- Group member 4, Wen Liang, fd21102@bristol.ac.uk, role
+- Group member 5, Zishen Xu, chuichisum@163.com, role
+
 
 ## Project Report
 
