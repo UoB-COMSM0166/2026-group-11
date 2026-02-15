@@ -46,6 +46,18 @@ GROUP PHOTO. Add a group photo here.
 - 15% ~750 words
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
 
+## 1. Stakeholders
+
+1. **Players**
+2. **Developers**
+3. **Artists**
+4. **Game Design**
+5. **Playtesters**
+6. **Project Manager**
+7. **Community & Content Creators**
+
+
+
 ### Design
 
 - 15% ~750 words 
