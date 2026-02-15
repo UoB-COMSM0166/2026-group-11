@@ -50,12 +50,53 @@ GROUP PHOTO. Add a group photo here.
 
 1. **Players**
 2. **Developers**
-3. **Artists**
-4. **Game Design**
-5. **Playtesters**
+3. **Game Design**
+4. **Artists**
+5. **Testers**
 6. **Project Manager**
 7. **Community & Content Creators**
 
+## 2. Epics & User Stories & Acceptance Criteria
+
+### Epic E1: Core PvP Tower Defense Loop
+- **US1.1 – Players**: As a player, I want to participate in a real-time PvP match where I can place towers and defend my base, so that I can compete against another player.
+  - **Acceptance Criteria**: Players can join a match, place towers on valid tiles, and both sides experience synchronized gameplay without noticeable delay.
+
+- **US1.2 – Players**: As a player, I want to choose between multiple upgrade paths for each tower type, so that I can adapt my strategy based on the opponent's moves.
+  - **Acceptance Criteria**: Upgrade menu shows at least two distinct options with clear stat previews; selection deducts gold and updates tower stats immediately.
+
+
+### Epic E2: Content & Balance
+- **US2.1 – Developers**: As a developer, I want to be able to adjust game balance values (such as tower damage, attack speed, and enemy health), so that we can fine-tune the gameplay experience.
+  - **Acceptance Criteria**: Balance values can be modified through a configuration file; changes are applied when the game starts; invalid values do not crash the game.
+
+- **US2.2 – Game Design**: As a game designer, I want to configure enemy wave parameters (number, type, spawn timing) for each map, so that I can create varied difficulty and pacing across matches.
+  - **Acceptance Criteria**: Wave definitions are editable per map; spawn timing and enemy composition can be customized; changes take effect when the map is loaded.
+
+
+### Epic E3: Combat Feedback & Readability
+- **US3.1 – Artists**: As an artist, I want clear visual effects (VFX) for attacks, hits, and tower destruction, so that players can easily understand combat outcomes.
+  - **Acceptance Criteria**: Attack impacts show a visible hit effect (spark or damage number) ; destruction triggers a unique animation and particle effect.
+
+
+### Epic E4: Quality
+- **US4.1 – Playtesters**:As a playtester, I want to quickly restart a match after it ends, so that I can test multiple scenarios in a short time.
+  - **Acceptance Criteria**: Restart option appears immediately on the end screen; clicking it begins a new match with the same settings within 3 seconds.
+
+
+### Epic E5: Community & Sharing Features
+- **US5.1 – Community & Content Creators**: As a content creator, I want to save match replays and share them, so that I can create highlight videos and engage the community.
+  - **Acceptance Criteria**: Replay files are saved locally after a match; replays can be played back in-game with correct timing; optional export to video is available.
+
+
+## 3. Reflection
+Working on this PvP tower defense game taught us how structured requirements can shape a project from the start. By defining epics, we broke the game into meaningful core PvP loop, combat feedback, game balance, demo readiness, and community features. This helped us see the big picture while keeping focused on what matters most for a competitive multiplayer experience.
+
+Writing user stories forced us to think from each stakeholder's perspective. For a PvP game, this was especially valuable: we had to balance the needs of competitive players with casual players, while also considering testers, designers, and content creators. This exposed early trade-offs, like how flashy effects might distract from readability in fast-paced matches.
+
+Acceptance criteria turned vague ideas into concrete checks. Instead of saying "the game should feel fair," we defined what fair means for our context—synchronized gameplay, clear upgrade choices, configurable wave parameters. This gave us a shared understanding of "done" and reduced ambiguity between team members.
+
+Through this process, we learned that good requirements are not just documentation—they are a communication tool. Epics helped us align on priorities, user stories kept us focused on real people using our game, and acceptance criteria prevented misunderstandings before coding started. We also learned that involving different perspectives early saves time later: what seems obvious to a developer might confuse a player, and what looks cool to an artist might hurt gameplay clarity. Moving forward, we will continue thinking in terms of who we are building for and what success actually looks like.
 
 
 ### Design
