@@ -97,6 +97,11 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 Through this process, we learned that good requirements are not just documentation—they are a communication tool. Epics helped us align on priorities, user stories kept us focused on real people using our game, and acceptance criteria prevented misunderstandings before coding started. We also learned that involving different perspectives early saves time later: what seems obvious to a developer might confuse a player, and what looks cool to an artist might hurt gameplay clarity. Moving forward, we will continue thinking in terms of who we are building for and what success actually looks like.
 
+#### 2.7 Sequence diagram
+<img width="3072" height="2048" alt="image" src="https://github.com/user-attachments/assets/db218de8-2eb2-43dc-a30d-330880f0c604" />
+
+#### 2.8 Class diagram
+
 
 ### Design
 
