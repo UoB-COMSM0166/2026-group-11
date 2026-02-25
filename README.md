@@ -52,13 +52,7 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 #### 2.3 Stakeholders
 
-1. **Players**
-2. **Developers**
-3. **Game Design**
-4. **Artists**
-5. **Testers**
-6. **Project Manager**
-7. **Community & Content Creators**
+<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
 
 #### 2.4 Epics & User Stories & Acceptance Criteria
 
