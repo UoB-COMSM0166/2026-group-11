@@ -38,27 +38,22 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 ### 1. Introduction
 
-Design Concept
-
+#### Design Concept
 This project aims to move beyond the traditional tower defense structure centered on passive defense and instead construct a strategy-based competitive system that integrates both offense and defense. By combining defensive construction with proactive troop deployment, the game requires players to continuously balance attacking and defending decisions, thereby enhancing strategic depth and real-time tension during combat.
 
-Gameplay Integration and Inspiration
-
+#### Gameplay Integration and Inspiration
 The game draws inspiration from two major gameplay paradigms. On one hand, it adopts the structural defense logic of traditional tower defense games. On the other hand, it is influenced by real-time strategy games such as Clash Royale, particularly in terms of time-based resource generation, real-time troop deployment, and unit counter relationships.
 By integrating resource growth mechanics, immediate deployment decisions, and a bidirectional advancement system into the tower defense framework, the gameplay shifts from passive defense to dynamic offensive–defensive competition, increasing both interactivity and strategic variability.
 
-Strategic Structure and Progression System
-
+#### Strategic Structure and Progression System
 The game constructs multi-layered strategic depth through an economic system, unit counter mechanisms, and a progression-based upgrade system. Players must manage resources and adjust unit compositions within individual battles while also developing long-term growth strategies through unit upgrades, castle enhancements, and economic improvements.
 The combination of short-term tactical decisions and long-term progression planning enhances replayability and strategic extensibility.
 
-Intelligent AI and Difficulty Design
-
+#### Intelligent AI and Difficulty Design
 The game features an intelligent AI system with multiple difficulty levels. The AI can dynamically adjust troop deployment timing and unit composition according to battlefield conditions. At higher difficulty levels, the AI demonstrates stronger resource management capabilities and more effective counter-strategies.
 This tiered difficulty structure ensures accessibility for beginners while providing meaningful challenges for experienced players.
 
-System Architecture
-
+#### System Architecture
 The overall system adopts a loop-driven combat structure: resource generation, unit creation, battle calculation, and victory condition evaluation form a continuous operational cycle. Meanwhile, the upgrade system functions as an outer progression layer that interacts with the core combat loop, resulting in a clear and well-structured system architecture.
 
 
