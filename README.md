@@ -26,6 +26,7 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 ## Your Group
 
 GROUP PHOTO. Add a group photo here.
+![image](https://github.com/user-attachments/assets/cf4abf93-01fc-4738-b1ac-b76788c01ac6)
 
 - Group member 1, Yi Lin, adai08823@gmail.com, role
 - Group member 2, Chuhang Li, zgndylch@163.com, role
