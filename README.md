@@ -106,7 +106,7 @@ Through this process, we learned that good requirements are not just documentati
 <img width="3072" height="2048" alt="image" src="https://github.com/user-attachments/assets/db218de8-2eb2-43dc-a30d-330880f0c604" />
 
 #### 2.8 Class diagram
-
+<img width="5124" height="5150" alt="image" src="https://github.com/user-attachments/assets/64876e13-3bcd-4e72-9c55-d65a63aded2d" />
 
 ### Design
 
