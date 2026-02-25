@@ -36,18 +36,21 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 ## Project Report
 
-### Introduction
+### 1. Introduction
 
 - 5% ~250 words 
 - Describe your game, what is based on, what makes it novel? (what's the "twist"?) 
 
 
-### Requirements 
+### 2. Requirements 
 
 - 15% ~750 words
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
 
-## 1. Stakeholders
+#### 2.1 Early ideas
+#### 2.2 Paper prototypes
+
+#### 2.3 Stakeholders
 
 1. **Players**
 2. **Developers**
@@ -57,9 +60,9 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 6. **Project Manager**
 7. **Community & Content Creators**
 
-## 2. Epics & User Stories & Acceptance Criteria
+#### 2.4 Epics & User Stories & Acceptance Criteria
 
-### Epic E1: Core PvP Tower Defense Loop
+##### Epic E1: Core PvP Tower Defense Loop
 - **US1.1 – Players**: As a player, I want to participate in a real-time PvP match where I can place towers and defend my base, so that I can compete against another player.
   - **Acceptance Criteria**: Players can join a match, place towers on valid tiles, and both sides experience synchronized gameplay without noticeable delay.
 
@@ -67,7 +70,7 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
   - **Acceptance Criteria**: Upgrade menu shows at least two distinct options with clear stat previews; selection deducts gold and updates tower stats immediately.
 
 
-### Epic E2: Content & Balance
+##### Epic E2: Content & Balance
 - **US2.1 – Developers**: As a developer, I want to be able to adjust game balance values (such as tower damage, attack speed, and enemy health), so that we can fine-tune the gameplay experience.
   - **Acceptance Criteria**: Balance values can be modified through a configuration file; changes are applied when the game starts; invalid values do not crash the game.
 
@@ -75,17 +78,17 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
   - **Acceptance Criteria**: Wave definitions are editable per map; spawn timing and enemy composition can be customized; changes take effect when the map is loaded.
 
 
-### Epic E3: Combat Feedback & Readability
+##### Epic E3: Combat Feedback & Readability
 - **US3.1 – Artists**: As an artist, I want clear visual effects (VFX) for attacks, hits, and tower destruction, so that players can easily understand combat outcomes.
   - **Acceptance Criteria**: Attack impacts show a visible hit effect (spark or damage number) ; destruction triggers a unique animation and particle effect.
 
 
-### Epic E4: Quality
+##### Epic E4: Quality
 - **US4.1 – Playtesters**:As a playtester, I want to quickly restart a match after it ends, so that I can test multiple scenarios in a short time.
   - **Acceptance Criteria**: Restart option appears immediately on the end screen; clicking it begins a new match with the same settings within 3 seconds.
 
 
-### Epic E5: Community & Sharing Features
+##### Epic E5: Community & Sharing Features
 - **US5.1 – Community & Content Creators**: As a content creator, I want to save match replays and share them, so that I can create highlight videos and engage the community.
   - **Acceptance Criteria**: Replay files are saved locally after a match; replays can be played back in-game with correct timing; optional export to video is available.
 
