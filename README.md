@@ -63,6 +63,13 @@ The overall system adopts a loop-driven combat structure: resource generation, u
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
 
 #### 2.1 Early ideas
+
+At the early stage of the project, we did not immediately decide on a final game type. Instead, we explored several possible directions, including tower defense games, controllable character games (such as shooting games), rhythm games, and strategy war games. Tower defense offered a clear structural framework and was suitable for building a stable combat loop and upgrade system. Shooting games emphasized direct player control and immediate feedback. Rhythm games provided interesting technical challenges, particularly in timing and judgement systems. Strategy war games, on the other hand, focused on resource allocation, frontline advancement, and offensive–defensive pacing, offering stronger strategic depth.
+
+After comparing these options, we found that a single genre could not fully balance interaction and long-term strategic development. Therefore, we decided to integrate elements of tower defense and strategy war games to create an offensive–defensive strategy experience. Tower defense provides the structural foundation and defensive system, while strategy war mechanics introduce frontline pressure and resource management, transforming the gameplay from passive defense into dynamic two-sided competition.
+
+Based on this integration, the purpose of the game is to build a strategic system centered on the balance between offense and defense, where players gain advantages through economic management, unit counter strategies, and progression systems rather than relying solely on fast reactions or fixed tactics. In addition, the implementation of intelligent AI and multiple difficulty levels ensures that players of different skill levels can experience appropriate challenges and maintain long-term engagement.
+
 #### 2.2 Prototypes
 This is our prototypes.
 
