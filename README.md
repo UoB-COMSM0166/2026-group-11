@@ -50,7 +50,11 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 #### 2.1 Early ideas
 #### 2.2 Prototypes
 This is our prototypes.
-https://github.com/user-attachments/assets/2cd0e064-ddf7-4458-991c-49b9d64fb205
+
+
+https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
+
+
 #### 2.3 Stakeholders
 
 <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
