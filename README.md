@@ -85,9 +85,95 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 ##### Epic E5: Community & Sharing Features
 - **US5.1 – Community & Content Creators**: As a content creator, I want to save match replays and share them, so that I can create highlight videos and engage the community.
   - **Acceptance Criteria**: Replay files are saved locally after a match; replays can be played back in-game with correct timing; optional export to video is available.
+#### 2.5 Use case diagram
+graph TD
 
+    %% Actors
+    Player1["Player 1"]:::actor
+    Player2["Player 2"]:::actor
 
-#### 2.5 Reflection
+    %% Core Systems
+    Matchmaking["Matchmaking System"]:::system
+    GameLoop["Real-Time PvP Game Loop"]:::system
+    TowerPlacement["Tower Placement System"]:::system
+    UpgradeSystem["Tower Upgrade Paths"]:::system
+    WaveSystem["Enemy Wave System"]:::system
+    EnemyAI["Enemy Pathing & Behavior"]:::system
+    ResourceSystem["Gold & Resource Management"]:::system
+    DamageSystem["Combat & Damage Calculation"]:::system
+    SyncSystem["Network Synchronization"]:::system
+    ConfigSystem["Balance Config File"]:::system
+    ReplaySystem["Replay Recording & Playback"]:::system
+    RestartSystem["Quick Restart System"]:::system
+
+    %% UI
+    GameUI["In-Game UI (Gold, HP, Upgrades)"]:::system
+    EndScreen["End Match Screen"]:::critical
+
+    %% Win/Lose
+    BaseHP["Base Health System"]:::system
+    Win["Opponent Base HP = 0 → Win"]:::critical
+
+    %% Player Interactions
+    Player1 --> Matchmaking
+    Player2 --> Matchmaking
+
+    Matchmaking --> GameLoop
+
+    Player1 --> TowerPlacement
+    Player2 --> TowerPlacement
+
+    Player1 --> UpgradeSystem
+    Player2 --> UpgradeSystem
+
+    Player1 --> ResourceSystem
+    Player2 --> ResourceSystem
+
+    %% Tower logic
+    TowerPlacement --> ResourceSystem
+    UpgradeSystem --> ResourceSystem
+    UpgradeSystem --> DamageSystem
+
+    %% Wave logic
+    GameLoop --> WaveSystem
+    WaveSystem --> EnemyAI
+    EnemyAI --> DamageSystem
+
+    %% Combat resolution
+    DamageSystem --> BaseHP
+    DamageSystem --> GameUI
+
+    %% Resource updates
+    EnemyAI -->|Enemy Killed| ResourceSystem
+    ResourceSystem --> GameUI
+
+    %% Sync
+    GameLoop --> SyncSystem
+    TowerPlacement --> SyncSystem
+    UpgradeSystem --> SyncSystem
+    EnemyAI --> SyncSystem
+
+    %% Balance configuration
+    ConfigSystem --> TowerPlacement
+    ConfigSystem --> UpgradeSystem
+    ConfigSystem --> EnemyAI
+    ConfigSystem --> WaveSystem
+
+    %% Win condition
+    BaseHP -->|HP ≤ 0| Win
+    Win --> EndScreen
+
+    %% Replay & Restart
+    GameLoop --> ReplaySystem
+    EndScreen --> RestartSystem
+    RestartSystem --> GameLoop
+
+    %% Styling
+    classDef actor fill:#f9f,stroke:#333,stroke-width:1.5px
+    classDef system fill:#bbf,stroke:#333,stroke-width:1px
+    classDef critical fill:#f99,stroke:#900,stroke-width:2px,font-weight:bold
+
+#### 2.6 Reflection
 Working on this PvP tower defense game taught us how structured requirements can shape a project from the start. By defining epics, we broke the game into meaningful core PvP loop, combat feedback, game balance, demo readiness, and community features. This helped us see the big picture while keeping focused on what matters most for a competitive multiplayer experience.
 
 Writing user stories forced us to think from each stakeholder's perspective. For a PvP game, this was especially valuable: we had to balance the needs of competitive players with casual players, while also considering testers, designers, and content creators. This exposed early trade-offs, like how flashy effects might distract from readability in fast-paced matches.
