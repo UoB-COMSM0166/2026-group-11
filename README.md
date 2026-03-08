@@ -149,8 +149,7 @@ Through this process, we learned that good requirements are not just documentati
 
 - One quantitative evaluation (of your choice) 
 
-- Description of how code was tested.
-- 
+- Description of how code was tested. 
 
 #### Think Aloud Evaluation
 | Moment | Player Comment | Issue Identified |
@@ -163,7 +162,7 @@ Through this process, we learned that good requirements are not just documentati
 Our game was found to have several usability issues during the think-aloud evaluation process. Participants initially struggled to understand unit deployment methods, likely due to the absence of a “Start Game” option and insufficiently intuitive game introductions. The tower capture mechanism was similarly ambiguous, leaving players uncertain whether they could interact with towers. Additionally, differences between unit types were poorly understood, as the interface failed to clearly explain their functions. Finally, players expressed confusion about the gold-based resource system, with unclear display of held gold. Some players only discovered the gold cloth count displayed in the bottom-left corner near the end of their game.
 
 #### Heuristic Evaluation
-| Interface | Issue | Heuristic | Eval1 | Eval2 | Eval3 | Average |
+| Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
 |---|---|---|---|---|---|---|
 
 
