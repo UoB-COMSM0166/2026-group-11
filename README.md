@@ -156,7 +156,7 @@ Through this process, we learned that good requirements are not just documentati
 |------|------|------|
 | Start of game | "How do I place the unit?" | Player did not realise they must click the base to deploy units |
 | After selecting unit | "What are the differences between these shapes?" | Unit types were not clearly explained |
-| Near tower | "Am I taking over this tower?" | Tower capture mechanic was unclear |
+| Neutral tower | "Am I taking over this tower?" | Tower capture mechanic was unclear |
 | During gameplay | "How many gold coins do I have?" | Gold generation system was not obvious |
 
 Our game was found to have several usability issues during the think-aloud evaluation process. Participants initially struggled to understand unit deployment methods, likely due to the absence of a “Start Game” option and insufficiently intuitive game introductions. The tower capture mechanism was similarly ambiguous, leaving players uncertain whether they could interact with towers. Additionally, differences between unit types were poorly understood, as the interface failed to clearly explain their functions. Finally, players expressed confusion about the gold-based resource system, with unclear display of held gold. Some players only discovered the gold cloth count displayed in the bottom-left corner near the end of their game.
@@ -164,7 +164,12 @@ Our game was found to have several usability issues during the think-aloud evalu
 #### Heuristic Evaluation
 | Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
 |---|---|---|---|---|---|---|
-
+| Game Start / Main Screen |The game starts immediately when the page loads, giving players no preparation time or option to start the game manually.| User Control and Freedom | 3 | 3 | 2 | 2.7 |
+| Unit Representation |Four shapes are used to represent different unit types, but the introduction is unclear and the differences are not intuitive.| Recognition Rather Than Recall | 3 | 3 | 2 | 2.7 |
+| Unit Information Display |Players cannot see the exact health or attack values of units, making it difficult to evaluate combat strength.| Visibility of System Status | 3 | 2 | 2 | 2.3 |
+| Neutral Tower Capture |There is no progress indicator when capturing neutral defense towers, so players cannot tell how close they are to capturing them.| Visibility of System Status | 2 | 2 | 2 | 2.0 |
+| Resource Display |The gold counter is displayed in the bottom-left corner and is not visually prominent.| Visibility of System Status | 2 | 2 | 1 | 1.7 |
+| Combat Feedback |Units fighting each other have no visual effects, making battles less noticeable.| Visibility of System Status | 2 | 2 | 2 | 2.0 |
 
 
 
