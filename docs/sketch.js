@@ -89,6 +89,7 @@ function drawMenu() {
   }
 
   fill(0, 0, 0, 90);
+  noStroke();
   rect(0, 0, width, height);
 
   fill(255);
@@ -121,6 +122,8 @@ function menuMouse() {
 function drawIntro() {
   push();
 
+  background(25);
+
   fill(255);
   textAlign(CENTER, CENTER);
 
@@ -152,6 +155,8 @@ function introMouse() {
 
 function drawWorldMap() {
   push();
+
+  background(25);
 
   fill(255);
   textAlign(CENTER, CENTER);
@@ -602,7 +607,6 @@ class UI {
     fill(28);
     rect(0, MAP_H, width, UI_HEIGHT);
 
-    // Gold 放左上角
     fill(255);
     textAlign(LEFT, TOP);
     textSize(18);
@@ -628,7 +632,6 @@ class UI {
 
       const cx = cardX + cardW / 2;
 
-      
       push();
       translate(cx, cardY + 13);
 
