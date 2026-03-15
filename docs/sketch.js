@@ -1,5 +1,6 @@
 let game = null;
 let state = "menu";
+let bgImg;
 
 const CANVAS_W = 900;
 const CANVAS_H = 540;
@@ -11,6 +12,10 @@ const TEAM = {
   ENEMY: "ENEMY",
   NEUTRAL: "NEUTRAL"
 };
+
+function preload() {
+  bgImg = loadImage("assets/bg.png");
+}
 
 function setup() {
   createCanvas(CANVAS_W, CANVAS_H);
@@ -77,6 +82,15 @@ function drawButton(x, y, w, h, label) {
 function drawMenu() {
   push();
 
+  if (bgImg) {
+    image(bgImg, 0, 0, width, height);
+  } else {
+    background(25);
+  }
+
+  fill(0, 0, 0, 90);
+  rect(0, 0, width, height);
+
   fill(255);
   textAlign(CENTER, CENTER);
 
@@ -84,7 +98,7 @@ function drawMenu() {
   text("Tower Battle", width / 2, 130);
 
   textSize(18);
-  fill(200);
+  fill(220);
   text("A simple lane strategy game", width / 2, 175);
 
   drawButton(width / 2, 270, 240, 64, "Start Game");
