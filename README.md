@@ -2,9 +2,6 @@
 # 2026-group-11
 2026 COMSM0166 group 11
 
-[Click here to play the game](https://uob-comsm0166.github.io/2026-group-11/)
-
-
 ## Sunnyvale Gate
 
 Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this game is tailor-made for you — through spring, summer, autumn, and winter, protect your village in every season!
