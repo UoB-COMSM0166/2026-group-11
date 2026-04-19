@@ -60,11 +60,7 @@ Players will build different types of defense towers to protect their village fr
 | Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/e15dca6f-0e12-4c28-adba-d2df80db7878" />| Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
 
 # Requirements
-
-- 15% ~750 words
-- Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
-
-#### 2.1 Early ideas
+## 2.1 Early stages design
 
 At the early stage of the project, we did not immediately decide on a final game type. Instead, we explored several possible directions, including tower defense games, controllable character games (such as shooting games), rhythm games, and strategy war games. Tower defense offered a clear structural framework and was suitable for building a stable combat loop and upgrade system. Shooting games emphasized direct player control and immediate feedback. Rhythm games provided interesting technical challenges, particularly in timing and judgement systems. Strategy war games, on the other hand, focused on resource allocation, frontline advancement, and offensive–defensive pacing, offering stronger strategic depth.
 
