@@ -11,21 +11,8 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 
 VIDEO. Include a demo video of your game here
 
-## Team
-
-![image](https://github.com/user-attachments/assets/cf4abf93-01fc-4738-b1ac-b76788c01ac6)
-
-| # | Name | Email | Role |
-|:-:|------|-------|------|
-| 1 | Yi Lin | adai08823@gmail.com | Developer & Game Designer |
-| 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
-| 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
-| 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
-| 5 | Zishen Xu | chuichisum@163.com | Supporter & Process Coordinator |
-
-
 # Table of Contents
-
+0. [Team](#team)
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
 3. [Design](#design)
@@ -36,6 +23,18 @@ VIDEO. Include a demo video of your game here
 8. [Conclusion](#conclusion)
 9. [Contribution Statement](#contribution-statement)
 10. [AI Statement](#ai-statement)
+
+# Team
+
+![image](https://github.com/user-attachments/assets/cf4abf93-01fc-4738-b1ac-b76788c01ac6)
+
+| # | Name | Email | Role |
+|:-:|------|-------|------|
+| 1 | Yi Lin | adai08823@gmail.com | Developer & Game Designer |
+| 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
+| 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
+| 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
+| 5 | Zishen Xu | chuichisum@163.com | Supporter & Process Coordinator |
 
 # Introduction
 
