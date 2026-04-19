@@ -12,17 +12,17 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 VIDEO. Include a demo video of your game here
 
 # Table of Contents
-0. [Team](#team)
-1. [Introduction](#introduction)
-2. [Requirements](#requirements)
-3. [Design](#design)
-4. [Implementation](#implementation)
-5. [Evaluation](#evaluation)
-6. [Process](#process)
-7. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
-8. [Conclusion](#conclusion)
-9. [Contribution Statement](#contribution-statement)
-10. [AI Statement](#ai-statement)
+1. [Team](#team)
+2. [Introduction](#introduction)
+3. [Requirements](#requirements)
+4. [Design](#design)
+5. [Implementation](#implementation)
+6. [Evaluation](#evaluation)
+7. [Process](#process)
+8. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
+9. [Conclusion](#conclusion)
+10. [Contribution Statement](#contribution-statement)
+11. [AI Statement](#ai-statement)
 
 # Team
 
