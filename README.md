@@ -42,6 +42,7 @@ When we first brainstormed game ideas, we all coincidentally thought of two very
 
 Players will build different types of defense towers to protect their village from attacks by various slime enemies across four maps, each representing a distinct season. By defeating enemies and earning gold, players can upgrade their basic defense towers; selecting the right towers to upgrade will be key to turning the tide of battle. Beyond what *Kingdom Rush* offers, we’ve designed a variety of unique towers. For example, the Frost Tower slows down enemies, and the Cannon Tower focuses attacks on the densest clusters of enemies. Additionally, the final boss in the last level has several unique skills.
 
+## Defensive Towers
 | Tower Type | Image | Description |
 |------------|-------|-------------|
 | Archery Tower |<img width="457" height="657" alt="tower2" src="https://github.com/user-attachments/assets/af7b8802-013b-4be1-9a71-cbdbf7a21c98" /> | The cheapest tower deals a small amount of physical damage within its attack range.|
@@ -49,6 +50,17 @@ Players will build different types of defense towers to protect their village fr
 | Cannon Tower | <img width="457" height="657" alt="tower3" src="https://github.com/user-attachments/assets/2e983e7e-37fd-4259-89b4-f363c50ea82b" />| Deals area-of-effect physical damage within the attack range, focusing primarily on areas with a high concentration of monsters. |
 | Ice Tower | <img width="424" height="433" alt="tower4" src="https://github.com/user-attachments/assets/46b11b34-2670-4f40-bcfe-4bf9d5af13f3" /> | Slows the enemy's movement speed and deals a small amount of magic damage.. |
 
+## Partial enemies
+
+| Monster Type | Image | Description |
+|--------------|-------|-------------|
+| Green Slime |  | The lowest-level slime, with low health and low armor, can be easily defeated. |
+| Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/3b85462f-9e24-47ce-b468-fca87135e476" />
+ | High health and physical defense; attacking with a magic tower is very effective. |
+| Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/6a7c99ad-c3f9-4661-9dad-fcf0a0131cce" />
+ | With high health and magic defense, attacking with cannons is very effective. |
+| Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/e15dca6f-0e12-4c28-adba-d2df80db7878" />
+ | Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
 
 # Requirements
 
