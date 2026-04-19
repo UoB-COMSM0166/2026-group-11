@@ -37,7 +37,7 @@ VIDEO. Include a demo video of your game here
 9. [Contribution Statement](#contribution-statement)
 10. [AI Statement](#ai-statement)
 
-# 1. Introduction
+# Introduction
 
 #### Design Concept
 This project aims to move beyond the traditional tower defense structure centered on passive defense and instead construct a strategy-based competitive system that integrates both offense and defense. By combining defensive construction with proactive troop deployment, the game requires players to continuously balance attacking and defending decisions, thereby enhancing strategic depth and real-time tension during combat.
@@ -58,7 +58,7 @@ This tiered difficulty structure ensures accessibility for beginners while provi
 The overall system adopts a loop-driven combat structure: resource generation, unit creation, battle calculation, and victory condition evaluation form a continuous operational cycle. Meanwhile, the upgrade system functions as an outer progression layer that interacts with the core combat loop, resulting in a clear and well-structured system architecture.
 
 
-# 2.Requirements
+# Requirements
 
 - 15% ~750 words
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
@@ -179,6 +179,7 @@ Our game was found to have several usability issues during the think-aloud evalu
 - 15% ~750 words
 
 - Teamwork. How did you work together, what tools and methods did you use? Did you define team roles? Reflection on how you worked together. Be honest, we want to hear about what didn't work as well as what did work, and importantly how your team adapted throughout the project.
+
 
 # Sustainability, ethics and accessibility
 
