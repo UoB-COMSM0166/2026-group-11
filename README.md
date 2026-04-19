@@ -54,13 +54,10 @@ Players will build different types of defense towers to protect their village fr
 
 | Monster Type | Image | Description |
 |--------------|-------|-------------|
-| Green Slime |  | The lowest-level slime, with low health and low armor, can be easily defeated. |
-| Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/3b85462f-9e24-47ce-b468-fca87135e476" />
- | High health and physical defense; attacking with a magic tower is very effective. |
-| Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/6a7c99ad-c3f9-4661-9dad-fcf0a0131cce" />
- | With high health and magic defense, attacking with cannons is very effective. |
-| Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/e15dca6f-0e12-4c28-adba-d2df80db7878" />
- | Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
+| Baby Slime | <img width="32" height="24" alt="Baby_Slime" src="https://github.com/user-attachments/assets/5e5273b9-84b6-490c-946e-d1f48050d2ce" />| The lowest-level slime, with low health and low armor, can be easily defeated. |
+| Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/3b85462f-9e24-47ce-b468-fca87135e476" />| High health and physical defense; attacking with a magic tower is very effective. |
+| Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/6a7c99ad-c3f9-4661-9dad-fcf0a0131cce" />| With high health and magic defense, attacking with cannons is very effective. |
+| Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/e15dca6f-0e12-4c28-adba-d2df80db7878" />| Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
 
 # Requirements
 
