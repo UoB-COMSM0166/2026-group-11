@@ -1,6 +1,5 @@
 
 # 2026-group-11
-2026 COMSM0166 group 11
 
 ## Sunnyvale Gate
 
