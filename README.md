@@ -64,20 +64,20 @@ Players will build different types of defense towers to protect their village fr
 
 At the very beginning of the project, we held several online meetings to share our ideas for games. Tower defense and rhythm games were the directions we initially considered. Until the third week, our plan was to create a multiplayer online tower defense game where each player could build defense towers and deploy attacking soldiers. We used PowerPoint to create paper prototypes, and we tried sketching our ideas on paper, but the results didn't quite satisfy everyone.
 
-## 2.2 Prototypes
 This is our prototypes.
-
 
 https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
 
+During later discussions, we realized that developing a multiplayer online tower defense game would be too challenging for us, as we had no prior game development experience. After several review meetings, we finally decided to create a tower defense game in the style of Kingdom Rush.
+Over the next few weeks, we used stakeholders, epics, user stories, and acceptance criteria to clarify what players wanted to experience in our game. We also created a use case diagram to define the game’s overall workflow to guide future development.
 
-#### 2.3 Stakeholders
+## 2.3 Stakeholders
 
 <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
 
-#### 2.4 Epics & User Stories & Acceptance Criteria
+## 2.4 Epics & User Stories & Acceptance Criteria
 
-##### Epic E1: Core PvP Tower Defense Loop
+### Epic E1: Core PvP Tower Defense Loop
 - **US1.1 – Players**: As a player, I want to participate in a real-time PvP match where I can place towers and defend my base, so that I can compete against another player.
   - **Acceptance Criteria**: Players can join a match, place towers on valid tiles, and both sides experience synchronized gameplay without noticeable delay.
 
@@ -85,7 +85,7 @@ https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
   - **Acceptance Criteria**: Upgrade menu shows at least two distinct options with clear stat previews; selection deducts gold and updates tower stats immediately.
 
 
-##### Epic E2: Content & Balance
+### Epic E2: Content & Balance
 - **US2.1 – Developers**: As a developer, I want to be able to adjust game balance values (such as tower damage, attack speed, and enemy health), so that we can fine-tune the gameplay experience.
   - **Acceptance Criteria**: Balance values can be modified through a configuration file; changes are applied when the game starts; invalid values do not crash the game.
 
@@ -93,23 +93,23 @@ https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
   - **Acceptance Criteria**: Wave definitions are editable per map; spawn timing and enemy composition can be customized; changes take effect when the map is loaded.
 
 
-##### Epic E3: Combat Feedback & Readability
+### Epic E3: Combat Feedback & Readability
 - **US3.1 – Artists**: As an artist, I want clear visual effects (VFX) for attacks, hits, and tower destruction, so that players can easily understand combat outcomes.
   - **Acceptance Criteria**: Attack impacts show a visible hit effect (spark or damage number) ; destruction triggers a unique animation and particle effect.
 
 
-##### Epic E4: Quality
+### Epic E4: Quality
 - **US4.1 – Playtesters**:As a playtester, I want to quickly restart a match after it ends, so that I can test multiple scenarios in a short time.
   - **Acceptance Criteria**: Restart option appears immediately on the end screen; clicking it begins a new match with the same settings within 3 seconds.
 
 
-##### Epic E5: Community & Sharing Features
+### Epic E5: Community & Sharing Features
 - **US5.1 – Community & Content Creators**: As a content creator, I want to save match replays and share them, so that I can create highlight videos and engage the community.
   - **Acceptance Criteria**: Replay files are saved locally after a match; replays can be played back in-game with correct timing; optional export to video is available.
-#### 2.5 Use case diagram
+## 2.5 Use case diagram
 <img width="2048" height="3072" alt="image" src="https://github.com/user-attachments/assets/771deb29-99c3-4320-850e-6c7a51587126" />
 
-#### 2.6 Reflection
+## 2.6 Reflection
 Working on this PvP tower defense game taught us how structured requirements can shape a project from the start. By defining epics, we broke the game into meaningful core PvP loop, combat feedback, game balance, demo readiness, and community features. This helped us see the big picture while keeping focused on what matters most for a competitive multiplayer experience.
 
 Writing user stories forced us to think from each stakeholder's perspective. For a PvP game, this was especially valuable: we had to balance the needs of competitive players with casual players, while also considering testers, designers, and content creators. This exposed early trade-offs, like how flashy effects might distract from readability in fast-paced matches.
@@ -118,16 +118,18 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 Through this process, we learned that good requirements are not just documentation—they are a communication tool. Epics helped us align on priorities, user stories kept us focused on real people using our game, and acceptance criteria prevented misunderstandings before coding started. We also learned that involving different perspectives early saves time later: what seems obvious to a developer might confuse a player, and what looks cool to an artist might hurt gameplay clarity. Moving forward, we will continue thinking in terms of who we are building for and what success actually looks like.
 
-#### 2.7 Sequence diagram
-<img width="3072" height="2048" alt="image" src="https://github.com/user-attachments/assets/db218de8-2eb2-43dc-a30d-330880f0c604" />
 
-#### 2.8 Class diagram
-<img width="5124" height="5150" alt="image" src="https://github.com/user-attachments/assets/64876e13-3bcd-4e72-9c55-d65a63aded2d" />
 
 # Design
 
 - 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams. 
+- System architecture. Class diagrams, behavioural diagrams.
+
+- ####  Sequence diagram
+<img width="3072" height="2048" alt="image" src="https://github.com/user-attachments/assets/db218de8-2eb2-43dc-a30d-330880f0c604" />
+
+- ####  Class diagram
+<img width="5124" height="5150" alt="image" src="https://github.com/user-attachments/assets/64876e13-3bcd-4e72-9c55-d65a63aded2d" />
 
 # Implementation
 
