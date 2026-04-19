@@ -167,7 +167,7 @@ Our game was found to have several usability issues during the think-aloud evalu
 | Resource Display |The gold counter is displayed in the bottom-left corner and is not visually prominent.| Visibility of System Status | 2 | 2 | 1 | 1.7 |
 | Combat Feedback |Units fighting each other have no visual effects, making battles less noticeable.| Visibility of System Status | 2 | 2 | 2 | 2.0 |
 
-
+## Quantitative Evaluation: NASA TLX and SUS
 
 # Process 
 
