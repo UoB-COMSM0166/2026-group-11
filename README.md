@@ -131,9 +131,9 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game.
 
-## Select the location with the most enemies in an area to deal area-of-effect damage
+## Challenge 1： Select the location with the most enemies in an area to deal area-of-effect damage
 
-## When the boss dies, it splits into four pieces and reassembles itself after a short time to revive.
+## Challenge 2： When the boss dies, it splits into four pieces and reassembles itself after a short time to revive.
 
 
 
