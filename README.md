@@ -32,9 +32,9 @@ VIDEO. Include a demo video of your game here
 4. [Implementation](#implementation)
 5. [Evaluation](#evaluation)
 6. [Process](#process)
-7. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
+7. [Sustainability, Ethics and Accessibility](#sustainability, ethics and accessibility)
 8. [Conclusion](#conclusion)
-9. [Contribution Statement](#contribution-statement)
+9. [Contribution Statement](#contribution statement)
 10. [AI Statement](#ai-statement)
 
 # 1. Introduction
@@ -58,7 +58,7 @@ This tiered difficulty structure ensures accessibility for beginners while provi
 The overall system adopts a loop-driven combat structure: resource generation, unit creation, battle calculation, and victory condition evaluation form a continuous operational cycle. Meanwhile, the upgrade system functions as an outer progression layer that interacts with the core combat loop, resulting in a clear and well-structured system architecture.
 
 
-### 2. Requirements 
+# 2.Requirements
 
 - 15% ~750 words
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
@@ -131,18 +131,18 @@ Through this process, we learned that good requirements are not just documentati
 #### 2.8 Class diagram
 <img width="5124" height="5150" alt="image" src="https://github.com/user-attachments/assets/64876e13-3bcd-4e72-9c55-d65a63aded2d" />
 
-### Design
+# Design
 
 - 15% ~750 words 
 - System architecture. Class diagrams, behavioural diagrams. 
 
-### Implementation
+# Implementation
 
 - 15% ~750 words
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
 
-### Evaluation
+# Evaluation
 
 - 15% ~750 words
 
@@ -174,21 +174,28 @@ Our game was found to have several usability issues during the think-aloud evalu
 
 
 
-### Process 
+# Process 
 
 - 15% ~750 words
 
 - Teamwork. How did you work together, what tools and methods did you use? Did you define team roles? Reflection on how you worked together. Be honest, we want to hear about what didn't work as well as what did work, and importantly how your team adapted throughout the project.
 
-### Conclusion
+# Sustainability, ethics and accessibility
+
+
+
+# Conclusion
 
 - 10% ~500 words
 
 - Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
 
-### Contribution Statement
+# Contribution Statement
 
 - Provide a table of everyone's contribution, which *may* be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+
+# Ai statement
+
 
 ### Additional Marks
 
