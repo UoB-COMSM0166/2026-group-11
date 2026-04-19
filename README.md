@@ -1,8 +1,8 @@
+
 # 2026-group-11
 2026 COMSM0166 group 11
 
-# COMSM0166 Project Template
-A project template for the Software Engineering Discipline and Practice module (COMSM0166).
+<img width="823" height="392" alt="title" src="https://github.com/user-attachments/assets/2e51c86c-477f-465f-b64c-6416c9d0a930" />
 
 ## Play the game
 
