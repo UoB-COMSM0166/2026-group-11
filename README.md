@@ -2,40 +2,30 @@
 # 2026-group-11
 2026 COMSM0166 group 11
 
-<img width="823" height="392" alt="title" src="https://github.com/user-attachments/assets/2e51c86c-477f-465f-b64c-6416c9d0a930" />
+[Click here to play the game](https://uob-comsm0166.github.io/2026-group-11/)
 
-## Play the game
+
+## Sunnyvale Gate
+
+Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this game is tailor-made for you — through spring, summer, autumn, and winter, protect your village in every season!
+
+<img width="823" height="392" alt="title" src="https://github.com/user-attachments/assets/2e51c86c-477f-465f-b64c-6416c9d0a930" />
 
 [Click here to play the game](https://uob-comsm0166.github.io/2026-group-11/)
 
-## Info
+VIDEO. Include a demo video of your game here
 
-This is the template for your group project repo/report. We'll be setting up your repo and assigning you to it after the group forming activity. You can delete this info section, but please keep the rest of the repo structure intact.
-
-You will be developing your game using [P5.js](https://p5js.org) a javascript library that provides you will all the tools you need to make your game. However, we won't be teaching you javascript, this is a chance for you and your team to learn a (friendly) new language and framework quickly, something you will almost certainly have to do with your summer project and in future. There is a lot of documentation online, you can start with:
-
-- [P5.js tutorials](https://p5js.org/tutorials/) 
-- [Coding Train P5.js](https://thecodingtrain.com/tracks/code-programming-with-p5-js) course - go here for enthusiastic video tutorials from Dan Shiffman (recommended!)
-
-## Your Game (change to title of your game)
-
-STRAPLINE. Add an exciting one sentence description of your game here.
-
-IMAGE. Add an image of your game here, keep this updated with a snapshot of your latest development.
-
-LINK. Add a link here to your deployed game, you can also make the image above link to your game if you wish. Your game lives in the [/docs](/docs) folder, and is published using Github pages. 
-
-VIDEO. Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
-
-## Your Group
+## Team
 
 ![image](https://github.com/user-attachments/assets/cf4abf93-01fc-4738-b1ac-b76788c01ac6)
 
-- Group member 1, Yi Lin, adai08823@gmail.com, role
-- Group member 2, Chuhang Li, zgndylch@163.com, role
-- Group member 3, Yuxuan Cheng, chengyx0921@outlook.com, role
-- Group member 4, Wen Liang, fd21102@bristol.ac.uk, role
-- Group member 5, Zishen Xu, chuichisum@163.com, role
+| # | Name | Email | Role |
+|:-:|------|-------|------|
+| 1 | Yi Lin | adai08823@gmail.com | Developer & Game Designer |
+| 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
+| 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
+| 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
+| 5 | Zishen Xu | chuichisum@163.com | Supporter & Process Coordinator |
 
 
 ## Project Report
