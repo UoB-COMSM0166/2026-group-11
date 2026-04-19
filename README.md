@@ -62,13 +62,9 @@ Players will build different types of defense towers to protect their village fr
 # Requirements
 ## 2.1 Early stages design
 
-At the early stage of the project, we did not immediately decide on a final game type. Instead, we explored several possible directions, including tower defense games, controllable character games (such as shooting games), rhythm games, and strategy war games. Tower defense offered a clear structural framework and was suitable for building a stable combat loop and upgrade system. Shooting games emphasized direct player control and immediate feedback. Rhythm games provided interesting technical challenges, particularly in timing and judgement systems. Strategy war games, on the other hand, focused on resource allocation, frontline advancement, and offensive–defensive pacing, offering stronger strategic depth.
+At the very beginning of the project, we held several online meetings to share our ideas for games. Tower defense and rhythm games were the directions we initially considered. Until the third week, our plan was to create a multiplayer online tower defense game where each player could build defense towers and deploy attacking soldiers. We used PowerPoint to create paper prototypes, and we tried sketching our ideas on paper, but the results didn't quite satisfy everyone.
 
-After comparing these options, we found that a single genre could not fully balance interaction and long-term strategic development. Therefore, we decided to integrate elements of tower defense and strategy war games to create an offensive–defensive strategy experience. Tower defense provides the structural foundation and defensive system, while strategy war mechanics introduce frontline pressure and resource management, transforming the gameplay from passive defense into dynamic two-sided competition.
-
-Based on this integration, the purpose of the game is to build a strategic system centered on the balance between offense and defense, where players gain advantages through economic management, unit counter strategies, and progression systems rather than relying solely on fast reactions or fixed tactics. In addition, the implementation of intelligent AI and multiple difficulty levels ensures that players of different skill levels can experience appropriate challenges and maintain long-term engagement.
-
-#### 2.2 Prototypes
+## 2.2 Prototypes
 This is our prototypes.
 
 
