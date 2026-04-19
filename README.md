@@ -42,6 +42,17 @@ When we first brainstormed game ideas, we all coincidentally thought of two very
 
 Players will build different types of defense towers to protect their village from attacks by various slime enemies across four maps, each representing a distinct season. By defeating enemies and earning gold, players can upgrade their basic defense towers; selecting the right towers to upgrade will be key to turning the tide of battle. Beyond what *Kingdom Rush* offers, we’ve designed a variety of unique towers. For example, the Frost Tower slows down enemies, and the Cannon Tower focuses attacks on the densest clusters of enemies. Additionally, the final boss in the last level has several unique skills.
 
+| Tower Type | Image | Description |
+|------------|-------|-------------|
+| Archery Tower |<img width="457" height="657" alt="tower2" src="https://github.com/user-attachments/assets/af7b8802-013b-4be1-9a71-cbdbf7a21c98" />
+| The cheapest tower deals a small amount of physical damage within its attack range.|
+| Magic Tower | <img width="414" height="427" alt="tower1" src="https://github.com/user-attachments/assets/8abc3787-0faa-4eed-9885-ba528511cecd" />
+ | Ignores armor, deals magic damage within the attack range.|
+| Cannon Tower | <img width="457" height="657" alt="tower3" src="https://github.com/user-attachments/assets/2e983e7e-37fd-4259-89b4-f363c50ea82b" />
+| Deals area-of-effect physical damage within the attack range, focusing primarily on areas with a high concentration of monsters. |
+| Ice Tower | <img width="424" height="433" alt="tower4" src="https://github.com/user-attachments/assets/46b11b34-2670-4f40-bcfe-4bf9d5af13f3" />
+| Slows the enemy's movement speed and deals a small amount of magic damage.. |
+
 
 # Requirements
 
