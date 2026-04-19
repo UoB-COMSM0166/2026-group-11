@@ -118,18 +118,24 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 - 15% ~750 words 
 - System architecture. Class diagrams, behavioural diagrams.
 
-- ##  Behavioural diagrams
-<img width="3072" height="2048" alt="image" src="https://github.com/user-attachments/assets/db218de8-2eb2-43dc-a30d-330880f0c604" />
+- ##  Behavioural diagrams    (wait for update)
+
 
 - ##  Class diagram   (wait for update)
 
-- 
+
 
 # Implementation
 
 - 15% ~750 words
 
-- Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
+- Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game.
+
+## Select the location with the most enemies in an area to deal area-of-effect damage
+
+## When the boss dies, it splits into four pieces and reassembles itself after a short time to revive.
+
+
 
 # Evaluation
 
@@ -141,7 +147,7 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 - Description of how code was tested. 
 
-#### Think Aloud Evaluation
+## Think Aloud Evaluation
 | Moment | Player Comment | Issue Identified |
 |------|------|------|
 | Start of game | "How do I place the unit?" | Player did not realise they must click the base to deploy units |
@@ -151,7 +157,7 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 Our game was found to have several usability issues during the think-aloud evaluation process. Participants initially struggled to understand unit deployment methods, likely due to the absence of a “Start Game” option and insufficiently intuitive game introductions. The tower capture mechanism was similarly ambiguous, leaving players uncertain whether they could interact with towers. Additionally, differences between unit types were poorly understood, as the interface failed to clearly explain their functions. Finally, players expressed confusion about the gold-based resource system, with unclear display of held gold. Some players only discovered the gold cloth count displayed in the bottom-left corner near the end of their game.
 
-#### Heuristic Evaluation
+## Heuristic Evaluation
 | Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
 |---|---|---|---|---|---|---|
 | Game Start / Main Screen |The game starts immediately when the page loads, giving players no preparation time or option to start the game manually.| User Control and Freedom | 3 | 3 | 2 | 2.7 |
@@ -171,6 +177,7 @@ Our game was found to have several usability issues during the think-aloud evalu
 
 
 # Sustainability, ethics and accessibility
+Evidence of the impact of your game across the environment and two of the other areas: Environmental +  2 of the following: Social, Economic, Technical, Individual 
 
 
 
