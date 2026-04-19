@@ -32,7 +32,7 @@ VIDEO. Include a demo video of your game here
 4. [Implementation](#implementation)
 5. [Evaluation](#evaluation)
 6. [Process](#process)
-7. [Sustainability, Ethics and Accessibility](#sustainability,-ethics-and-accessibility)
+7. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
 8. [Conclusion](#conclusion)
 9. [Contribution Statement](#contribution-statement)
 10. [AI Statement](#ai-statement)
