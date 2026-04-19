@@ -24,9 +24,20 @@ VIDEO. Include a demo video of your game here
 | 5 | Zishen Xu | chuichisum@163.com | Supporter & Process Coordinator |
 
 
-## Project Report
+# Table of Contents
 
-### 1. Introduction
+1. [Introduction](#introduction)
+2. [Requirements](#requirements)
+3. [Design](#design)
+4. [Implementation](#implementation)
+5. [Evaluation](#evaluation)
+6. [Process](#process)
+7. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
+8. [Conclusion](#conclusion)
+9. [Contribution Statement](#contribution-statement)
+10. [AI Statement](#ai-statement)
+
+# 1. Introduction
 
 #### Design Concept
 This project aims to move beyond the traditional tower defense structure centered on passive defense and instead construct a strategy-based competitive system that integrates both offense and defense. By combining defensive construction with proactive troop deployment, the game requires players to continuously balance attacking and defending decisions, thereby enhancing strategic depth and real-time tension during combat.
