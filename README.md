@@ -139,23 +139,17 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 # Evaluation
 
-- 15% ~750 words
+## Qualitative evaluation
 
-- One qualitative evaluation (of your choice) 
-
-- One quantitative evaluation (of your choice) 
-
-- Description of how code was tested. 
-
-## Think Aloud Evaluation
+### Think Aloud Evaluation
 | Moment | Player Comment | Issue Identified |
 |------|------|------|
-| Start of game | "How do I place the unit?" | Player did not realise they must click the base to deploy units |
-| After selecting unit | "What are the differences between these shapes?" | Unit types were not clearly explained |
-| Neutral tower | "Am I taking over this tower?" | Tower capture mechanic was unclear |
-| During gameplay | "How many gold coins do I have?" | Gold generation system was not obvious |
+| Game Start | “How do I place towers?” | Players aren’t aware of where to click to deploy towers |
+| After selecting a unit | “What’s the difference between these towers?” | Tower types aren’t clearly explained |
+| During gameplay | “How much health and gold do I have?” | The interface isn’t clear enough |
 
-Our game was found to have several usability issues during the think-aloud evaluation process. Participants initially struggled to understand unit deployment methods, likely due to the absence of a “Start Game” option and insufficiently intuitive game introductions. The tower capture mechanism was similarly ambiguous, leaving players uncertain whether they could interact with towers. Additionally, differences between unit types were poorly understood, as the interface failed to clearly explain their functions. Finally, players expressed confusion about the gold-based resource system, with unclear display of held gold. Some players only discovered the gold cloth count displayed in the bottom-left corner near the end of their game.
+During the “think-aloud” evaluation, we identified several usability issues with the game. Participants initially struggled to understand how to deploy towers, likely due to the missing “Start Game” option and the lack of an introductory tutorial. The tower-building mechanics were also ambiguous, leaving players unsure whether they could interact with the towers. Furthermore, since the interface did not clearly explain the functions of each tower type and there was no tutorial, players struggled to understand the differences between them. Finally, players expressed confusion regarding the gold system because the display of gold held was unclear. Some players did not notice the health and gold counts displayed in the top-left corner until the game was nearly over.
+
 
 ## Heuristic Evaluation
 | Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
@@ -163,11 +157,51 @@ Our game was found to have several usability issues during the think-aloud evalu
 | Game Start / Main Screen |The game starts immediately when the page loads, giving players no preparation time or option to start the game manually.| User Control and Freedom | 3 | 3 | 2 | 2.7 |
 | Unit Representation |Four shapes are used to represent different unit types, but the introduction is unclear and the differences are not intuitive.| Recognition Rather Than Recall | 3 | 3 | 2 | 2.7 |
 | Unit Information Display |Players cannot see the exact health or attack values of units, making it difficult to evaluate combat strength.| Visibility of System Status | 3 | 2 | 2 | 2.3 |
-| Neutral Tower Capture |There is no progress indicator when capturing neutral defense towers, so players cannot tell how close they are to capturing them.| Visibility of System Status | 2 | 2 | 2 | 2.0 |
 | Resource Display |The gold counter is displayed in the bottom-left corner and is not visually prominent.| Visibility of System Status | 2 | 2 | 1 | 1.7 |
 | Combat Feedback |Units fighting each other have no visual effects, making battles less noticeable.| Visibility of System Status | 2 | 2 | 2 | 2.0 |
 
-## Quantitative Evaluation: NASA TLX and SUS
+The results of the heuristic evaluation highlighted several usability issues, and we have prioritized design improvements. The most critical issues are those with the highest severity score (2.7), specifically the lack of a tutorial at the start of the game, which prevents users from getting off to a smooth start. We plan to address these issues first, as they directly impact the user’s initial experience and their ability to understand the core game mechanics. Medium-priority issues include a lack of clear unit information and insufficient combat feedback, which hinder players’ ability to make informed decisions and receive feedback during combat. Lower-priority issues, such as resource visibility being unclear, have a lesser impact on overall usability but still require improvements to enhance the overall experience.
+
+## Quantitative Evaluation
+
+### NASA TLX
+| User | Difficulty 1 | Difficulty 2 |
+|------|-------------|-------------|
+| 1 | 35 | 72 |
+| 2 | 58 | 65 |
+| 3 | 41 | 78 |
+| 4 | 63 | 70 |
+| 5 | 47 | 82 |
+| 6 | 52 | 60 |
+| 7 | 29 | 67 |
+| 8 | 61 | 75 |
+| 9 | 45 | 73 |
+| 10 | 54 | 68 |
+
+The NASA TLX test results presented in the table show the perceived workload of ten users across two difficulty levels of the game. Overall, the data indicates a clear trend of increased workload at difficulty level 2 compared to difficulty level 1. Most participants required greater mental effort when playing at difficulty level 2, and they also reported increased anxiety and frustration.
+
+### SUS
+
+| User | Difficulty 1 | Difficulty 2 |
+|------|-------------|-------------|
+| 1 | 52 | 40 |
+| 2 | 55 | 45 |
+| 3 | 50 | 38 |
+| 4 | 53 | 42 |
+| 5 | 48 | 35 |
+| 6 | 58 | 47 |
+| 7 | 54 | 50 |
+| 8 | 49 | 37 |
+| 9 | 51 | 41 |
+| 10 | 53 | 44 |
+
+The SUS results shown in the table indicate that the usability score has been consistently low at both difficulty levels, suggesting significant usability issues with the system. For difficulty level 1, most scores are between 48 and 58, mainly due to the unclear UI interface displaying health and coins, which creates a bad experience for players. For difficulty level 2, the score further decreases, with many values dropping between 35 and 45, reflecting that the increase in difficulty exacerbates existing usability issues.
+
+## How code was tested
+
+white box
+black box
+
 
 # Process 
 
@@ -189,15 +223,21 @@ Evidence of the impact of your game across the environment and two of the other 
 
 # Contribution statement
 
-- Provide a table of everyone's contribution, which *may* be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+| Contributor | Contribution |
+|------------|-------------|
+| Yi Lin | 1 |
+| Chuhang Li | 1 |
+| Yuxuan Cheng | 1 |
+| Wen Liang | 1 |
+| Zishen Xu | 1 |
 
 # Ai statement
 
+During the development process of this project, artificial intelligence tools were used for limited and supportive roles. The background image we use is generated using artificial intelligence tools to enhance the overall beauty of the game and save time. In addition, when addressing technical challenges in code, artificial intelligence is occasionally consulted as a learning aid tool. We did not directly copy the generated code, but used artificial intelligence to understand methods and solutions, and then implemented our own versions based on this understanding. All core design decisions, implementation, and evaluation are independently conducted by the team.
+
 
 ### Additional Marks
-
 You can delete this section in your own repo, it's just here for information. in addition to the marks above, we will be marking you on the following two points:
-
 - **Quality** of report writing, presentation, use of figures and visual material (5% of report grade) 
   - Please write in a clear concise manner suitable for an interested layperson. Write as if this repo was publicly available.
 - **Documentation** of code (5% of report grade)
