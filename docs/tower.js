@@ -17,30 +17,30 @@ const TOWER_UPGRADE_COSTS = {
 const TOWER_LEVEL_STATS = {
   // tower1 = 魔法塔
   tower1: [
-    { range: 400, fireRate: 45, damage: 20, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
-    { range: 450, fireRate: 40, damage: 30, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
-    { range: 500, fireRate: 35, damage: 50, splashRadius: 0, slowFactor: 1, slowDuration: 0 }
+    { range: 400, fireRate: 40, damage: 25, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
+    { range: 450, fireRate: 35, damage: 35, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
+    { range: 500, fireRate: 30, damage: 50, splashRadius: 0, slowFactor: 1, slowDuration: 0 }
   ],
 
   // tower2 = 弓箭塔
   tower2: [
-    { range: 400, fireRate: 30, damage: 8, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
+    { range: 400, fireRate: 25, damage: 8, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
     { range: 500, fireRate: 20, damage: 12, splashRadius: 0, slowFactor: 1, slowDuration: 0 },
     { range: 600, fireRate: 10, damage: 16, splashRadius: 0, slowFactor: 1, slowDuration: 0 }
   ],
 
   // tower3 = 炮塔
   tower3: [
-    { range: 400, fireRate: 65, damage: 30, splashRadius: 70, slowFactor: 1, slowDuration: 0 },
-    { range: 440, fireRate: 60, damage: 50, splashRadius: 85, slowFactor: 1, slowDuration: 0 },
-    { range: 480, fireRate: 55, damage: 70, splashRadius: 105, slowFactor: 1, slowDuration: 0 }
+    { range: 400, fireRate: 60, damage: 30, splashRadius: 70, slowFactor: 1, slowDuration: 0 },
+    { range: 440, fireRate: 55, damage: 50, splashRadius: 85, slowFactor: 1, slowDuration: 0 },
+    { range: 480, fireRate: 50, damage: 70, splashRadius: 105, slowFactor: 1, slowDuration: 0 }
   ],
 
   // tower4 = 冰塔
   tower4: [
-    { range: 400, fireRate: 40, damage: 4, splashRadius: 0, slowFactor: 0.5, slowDuration: 70 },
-    { range: 450, fireRate: 35, damage: 5, splashRadius: 0, slowFactor: 0.4, slowDuration: 90 },
-    { range: 500, fireRate: 25, damage: 6, splashRadius: 0, slowFactor: 0.3, slowDuration: 120 }
+    { range: 400, fireRate: 30, damage: 4, splashRadius: 0, slowFactor: 0.5, slowDuration: 70 },
+    { range: 500, fireRate: 25, damage: 5, splashRadius: 0, slowFactor: 0.4, slowDuration: 90 },
+    { range: 600, fireRate: 20, damage: 6, splashRadius: 0, slowFactor: 0.3, slowDuration: 120 }
   ]
 };
 
