@@ -181,25 +181,32 @@ The results of the heuristic evaluation highlighted several usability issues, an
 ## Quantitative Evaluation
 
 ### NASA TLX
+
 <p align="center">
-| User | Difficulty 1 | Difficulty 2 |
-|------|-------------|-------------|
-| 1 | 35 | 72 |
-| 2 | 58 | 65 |
-| 3 | 41 | 78 |
-| 4 | 63 | 70 |
-| 5 | 47 | 82 |
-| 6 | 52 | 60 |
-| 7 | 29 | 67 |
-| 8 | 61 | 75 |
-| 9 | 45 | 73 |
-| 10 | 54 | 68 |
+<table>
+  <tr>
+    <th>User</th>
+    <th>Difficulty 1</th>
+    <th>Difficulty 2</th>
+  </tr>
+  <tr><td>1</td><td>35</td><td>72</td></tr>
+  <tr><td>2</td><td>58</td><td>65</td></tr>
+  <tr><td>3</td><td>41</td><td>78</td></tr>
+  <tr><td>4</td><td>63</td><td>70</td></tr>
+  <tr><td>5</td><td>47</td><td>82</td></tr>
+  <tr><td>6</td><td>52</td><td>60</td></tr>
+  <tr><td>7</td><td>29</td><td>67</td></tr>
+  <tr><td>8</td><td>61</td><td>75</td></tr>
+  <tr><td>9</td><td>45</td><td>73</td></tr>
+  <tr><td>10</td><td>54</td><td>68</td></tr>
+</table>
 </p>
+
 
 The NASA TLX test results presented in the table show the perceived workload of ten users across two difficulty levels of the game. Overall, the data indicates a clear trend of increased workload at difficulty level 2 compared to difficulty level 1. Most participants required greater mental effort when playing at difficulty level 2, and they also reported increased anxiety and frustration.
 
 ### SUS
-<p align="center">
+
 | User | Difficulty 1 | Difficulty 2 |
 |------|-------------|-------------|
 | 1 | 52 | 40 |
@@ -212,7 +219,7 @@ The NASA TLX test results presented in the table show the perceived workload of 
 | 8 | 49 | 37 |
 | 9 | 51 | 41 |
 | 10 | 53 | 44 |
-</p>
+
 
 The SUS results shown in the table indicate that the usability score has been consistently low at both difficulty levels, suggesting significant usability issues with the system. For difficulty level 1, most scores are between 48 and 58, mainly due to the unclear UI interface displaying health and coins, which creates a bad experience for players. For difficulty level 2, the score further decreases, with many values dropping between 35 and 45, reflecting that the increase in difficulty exacerbates existing usability issues.
 
@@ -248,7 +255,7 @@ Evidence of the impact of your game across the environment and two of the other 
 - 
 
 # Contribution statement
-<p align="center">
+
 | Contributor | Contribution |
 |------------|-------------|
 | Yi Lin | 1 |
@@ -256,7 +263,7 @@ Evidence of the impact of your game across the environment and two of the other 
 | Yuxuan Cheng | 1 |
 | Wen Liang | 1 |
 | Zishen Xu | 1 |
-</p>
+
 
 
 # Ai statement
