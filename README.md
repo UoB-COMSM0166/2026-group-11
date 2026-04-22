@@ -230,9 +230,18 @@ Through this black box test, we not only verified the basic playability of the g
 
 # Process 
 
-- 15% ~750 words
+## Collaboration
 
-- Teamwork. How did you work together, what tools and methods did you use? Did you define team roles? Reflection on how you worked together. Be honest, we want to hear about what didn't work as well as what did work, and importantly how your team adapted throughout the project.
+## Tools
+In the first week after forming the group, we exchanged contact details and created a WeChat group to facilitate communication. During the second week, when discussing initial game ideas, we held an online meeting via Zoom and used Feishu’s document-sharing function to collaboratively develop and refine our concepts in real time.
+
+<img width="770" height="558" alt="ideas1" src="https://github.com/user-attachments/assets/47519de9-25ee-40bd-b81f-5081f3c6dbe6" />     <img width="217" height="392" alt="number" src="https://github.com/user-attachments/assets/bd65a7f6-e36a-4560-98f4-594caaa0eb66" />
+
+Throughout the project, we maintained frequent communication, with daily updates shared in the group chat to report progress and discuss ongoing changes. In addition to the weekly face-to-face meetings after Tuesday sessions, we organised online meetings for every two weeks to ensure that all team members remained aligned and were progressing in the right direction. After each meeting, one member was responsible for documenting key discussion points and recording areas for improvement in Feishu, allowing all members to stay informed and track development decisions.
+
+We implemented a Kanban-style task management system within Feishu to organise and track our development progress. Tasks were categorised into stages such as “To Do”, “In Progress”, and “Done”, which helped improve visibility and coordination within the team.
+
+This structured communication approach helped improve coordination and transparency within the team. By combining meetings and group chat and shared documents, we were able to respond quickly to issues and maintain consistent progress. However, there were occasional challenges in scheduling meetings due to conflicting timetables, which required flexibility and adjustment from all team members.
 
 
 # Sustainability, ethics and accessibility
