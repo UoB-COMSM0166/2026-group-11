@@ -181,7 +181,7 @@ The results of the heuristic evaluation highlighted several usability issues, an
 ## Quantitative Evaluation
 
 ### NASA TLX
-<div align="center">
+<p align="center">
 | User | Difficulty 1 | Difficulty 2 |
 |------|-------------|-------------|
 | 1 | 35 | 72 |
@@ -194,12 +194,12 @@ The results of the heuristic evaluation highlighted several usability issues, an
 | 8 | 61 | 75 |
 | 9 | 45 | 73 |
 | 10 | 54 | 68 |
-</div>
+</p>
 
 The NASA TLX test results presented in the table show the perceived workload of ten users across two difficulty levels of the game. Overall, the data indicates a clear trend of increased workload at difficulty level 2 compared to difficulty level 1. Most participants required greater mental effort when playing at difficulty level 2, and they also reported increased anxiety and frustration.
 
 ### SUS
-<div align="center">
+<p align="center">
 | User | Difficulty 1 | Difficulty 2 |
 |------|-------------|-------------|
 | 1 | 52 | 40 |
@@ -212,7 +212,7 @@ The NASA TLX test results presented in the table show the perceived workload of 
 | 8 | 49 | 37 |
 | 9 | 51 | 41 |
 | 10 | 53 | 44 |
-</div>
+</p>
 
 The SUS results shown in the table indicate that the usability score has been consistently low at both difficulty levels, suggesting significant usability issues with the system. For difficulty level 1, most scores are between 48 and 58, mainly due to the unclear UI interface displaying health and coins, which creates a bad experience for players. For difficulty level 2, the score further decreases, with many values dropping between 35 and 45, reflecting that the increase in difficulty exacerbates existing usability issues.
 
@@ -248,7 +248,7 @@ Evidence of the impact of your game across the environment and two of the other 
 - 
 
 # Contribution statement
-<div align="center">
+<p align="center">
 | Contributor | Contribution |
 |------------|-------------|
 | Yi Lin | 1 |
@@ -256,7 +256,7 @@ Evidence of the impact of your game across the environment and two of the other 
 | Yuxuan Cheng | 1 |
 | Wen Liang | 1 |
 | Zishen Xu | 1 |
-</div>
+</p>
 
 
 # Ai statement
