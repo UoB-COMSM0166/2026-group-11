@@ -54,10 +54,10 @@ Players will build different types of defense towers to protect their village fr
 
 | Monster Type | Image | Description |
 |--------------|-------|-------------|
-| Baby Slime | <img width="32" height="24" alt="Baby_Slime" src="https://github.com/user-attachments/assets/5e5273b9-84b6-490c-946e-d1f48050d2ce" />| The lowest-level slime, with low health and low armor, can be easily defeated. |
-| Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/3b85462f-9e24-47ce-b468-fca87135e476" />| High health and physical defense; attacking with a magic tower is very effective. |
-| Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/6a7c99ad-c3f9-4661-9dad-fcf0a0131cce" />| With high health and magic defense, attacking with cannons is very effective. |
-| Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/e15dca6f-0e12-4c28-adba-d2df80db7878" />| Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
+| Baby Slime | <img width="32" height="24" alt="Black_Slime" src="https://github.com/user-attachments/assets/f9e1a700-4710-4b88-8d80-211f838544bd" /> | The lowest-level slime, with low health and low armor, can be easily defeated. |
+| Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/c911a855-47e7-421f-afac-18237fcf0617" /> | High health and physical defense; attacking with a magic tower is very effective. |
+| Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/a8ff7869-9d90-400b-971b-471aa9da5b10" /> | With high health and magic defense, attacking with cannons is very effective. |
+| Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/1ed15559-f92e-4bd5-86a1-a73f57ea2008" /> | Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
 
 # Requirements
 ## 2.1 Early stages design
@@ -117,6 +117,7 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 - 15% ~750 words 
 - System architecture. Class diagrams, behavioural diagrams.
+代码结构
 
 - ##  Behavioural diagrams    (wait for update)
 
@@ -131,9 +132,24 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game.
 
-## Challenge 1： Select the location with the most enemies in an area to deal area-of-effect damage
+- 怎么完成整个游戏代码的
 
-## Challenge 2： When the boss dies, it splits into four pieces and reassembles itself after a short time to revive.
+## Challenge 1： Different defense towers
+
+### 1. The Ice Tower will prioritize attacking enemies who have not been slowed down
+介绍代码，配图
+
+### 2. The turret will select a position with the most enemies to deal damage to the range area
+介绍代码，配图
+
+
+## Challenge 2： Boss Design
+
+### 1. When the boss dies, it splits into four pieces and reassembles itself after a short time to revive.
+介绍代码，配图
+
+### 2. The boss will search for the most expensive tower in the map for targeted attacks.
+介绍代码，配图
 
 
 
@@ -165,6 +181,7 @@ The results of the heuristic evaluation highlighted several usability issues, an
 ## Quantitative Evaluation
 
 ### NASA TLX
+<div align="center">
 | User | Difficulty 1 | Difficulty 2 |
 |------|-------------|-------------|
 | 1 | 35 | 72 |
@@ -177,11 +194,12 @@ The results of the heuristic evaluation highlighted several usability issues, an
 | 8 | 61 | 75 |
 | 9 | 45 | 73 |
 | 10 | 54 | 68 |
+<div>
 
 The NASA TLX test results presented in the table show the perceived workload of ten users across two difficulty levels of the game. Overall, the data indicates a clear trend of increased workload at difficulty level 2 compared to difficulty level 1. Most participants required greater mental effort when playing at difficulty level 2, and they also reported increased anxiety and frustration.
 
 ### SUS
-
+<div align="center">
 | User | Difficulty 1 | Difficulty 2 |
 |------|-------------|-------------|
 | 1 | 52 | 40 |
@@ -194,13 +212,20 @@ The NASA TLX test results presented in the table show the perceived workload of 
 | 8 | 49 | 37 |
 | 9 | 51 | 41 |
 | 10 | 53 | 44 |
+<div>
 
 The SUS results shown in the table indicate that the usability score has been consistently low at both difficulty levels, suggesting significant usability issues with the system. For difficulty level 1, most scores are between 48 and 58, mainly due to the unclear UI interface displaying health and coins, which creates a bad experience for players. For difficulty level 2, the score further decreases, with many values dropping between 35 and 45, reflecting that the increase in difficulty exacerbates existing usability issues.
 
 ## How code was tested
 
-white box
-black box
+### White box
+
+### Black box
+Throughout the development process, we have been conducting black box testing, focusing on interacting with the game from the player's perspective to verify if the functionality is working as expected. This method helped us identify and solve several key problems.
+Firstly, the background image does not match the actual walkable path. Testers found that the area shown in the background image as a road differed from the walkable path by a certain distance, causing enemies to directly pass through terrain that was not suitable for walking. We have readjusted the collision and visual layers of each map to ensure that the enemy's path perfectly matches the visual background.
+Secondly, there have been cases where testers clicked on the UI to build defense towers but nothing happened. After fixing the UI logic, all buttons reliably triggered the build and upgrade operations.
+Thirdly, the game is unbalanced - monsters are too difficult to deal with. Feedback indicates that early enemies had excessively high health values; Even with correctly placed towers, it is difficult for players to kill them, which greatly damages the experience. Based on the test data, we adjusted the enemy's health and the damage of the defense tower to make the difficulty curve smoother, challenging but not discouraging.
+Through this black box test, we not only verified the basic playability of the game, but also collected valuable player feedback. After each fix, we will rerun the relevant test cases to ensure that the issue is truly resolved and no new errors are introduced. This lays a solid foundation for providing stable and enjoyable tower defense games.
 
 
 # Process 
@@ -220,9 +245,10 @@ Evidence of the impact of your game across the environment and two of the other 
 - 10% ~500 words
 
 - Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
+- 
 
 # Contribution statement
-
+<div align="center">
 | Contributor | Contribution |
 |------------|-------------|
 | Yi Lin | 1 |
@@ -230,6 +256,8 @@ Evidence of the impact of your game across the environment and two of the other 
 | Yuxuan Cheng | 1 |
 | Wen Liang | 1 |
 | Zishen Xu | 1 |
+<div>
+
 
 # Ai statement
 
