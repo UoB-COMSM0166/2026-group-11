@@ -115,14 +115,18 @@ Acceptance criteria turned vague ideas into concrete checks. Instead of saying "
 
 # Design
 
-- 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams.
-代码结构
+The system uses a browser-based single-page architecture built on p5.js. The central controller is sketch.js, which manages the p5 lifecycle methods including preload(), setup(), draw(), and mousePressed(). The game is controlled by a global scene state variable, gameState, which switches between the home screen, comic intro, level selection, and gameplay scene.
+﻿
+The gameplay system is data-driven. Map layouts are stored in maps.js, enemy statistics are stored in ENEMY_TYPES, tower costs and upgrades are stored in TOWER_COST, TOWER_UPGRADE_COSTS, and TOWER_LEVEL_STATS, while wave configurations are stored in LEVEL_WAVE_CONFIGS. During gameplay, the main dynamic entities are stored in three arrays: towers, enemies, and lasers. Each frame, the system updates enemy movement, tower targeting, projectile/effect behaviour, economy, health, and win/loss conditions.
+﻿
+The system is organised using a modular script-based architecture, with key responsibilities separated across different files. Core gameplay features such as enemy behaviour, tower behaviour, wave management, and UI control are handled by dedicated modules, while supporting systems such as audio, pause control, speed adjustment, tutorial guidance, and white-box testing are implemented separately. This structure improves readability and maintainability, and allows new features to be added without major changes to the central gameplay loop.
 
-- ##  Behavioural diagrams    (wait for update)
+- ##  Behavioural diagrams
+<img width="1448" height="1086" alt="Sequence Diagram" src="https://github.com/user-attachments/assets/d7aa5286-a03b-4526-af83-febf6b36467e" />
 
+The sequence diagram illustrates the main interaction flow of the tower defense game from the player’s perspective. It begins with the player starting the game from the home screen and entering the level selection interface. After a map is selected, the gameplay system loads the chosen map and begins the wave-based enemy spawning process. During gameplay, the player can place towers, and the gameplay system creates the corresponding tower objects. These towers then attack enemies as they move along the path, while the gameplay system continuously updates enemy states and checks whether the player has won or lost. The diagram also shows the pause function, where the player can open the pause menu and later resume the game. Finally, depending on the result of the level, the system displays either the victory or defeat screen to the player.
 
-- ##  Class diagram   (wait for update)
+- ##  Class diagram
 
 
 
