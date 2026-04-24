@@ -127,7 +127,7 @@ The system is organised using a modular script-based architecture, with key resp
 The sequence diagram illustrates the main interaction flow of the tower defense game from the player’s perspective. It begins with the player starting the game from the home screen and entering the level selection interface. After a map is selected, the gameplay system loads the chosen map and begins the wave-based enemy spawning process. During gameplay, the player can place towers, and the gameplay system creates the corresponding tower objects. These towers then attack enemies as they move along the path, while the gameplay system continuously updates enemy states and checks whether the player has won or lost. The diagram also shows the pause function, where the player can open the pause menu and later resume the game. Finally, depending on the result of the level, the system displays either the victory or defeat screen to the player.
 
 - ##  Class diagram
-
+1
 
 
 # Implementation
@@ -223,6 +223,7 @@ The SUS results shown in the table indicate that the usability score has been co
 ## How code was tested
 
 ### White box
+The white-box testing in this project focuses on the internal game logic instead of the visual interface. The test page resets the main game variables before each test, including enemies, towers, player gold, player life, wave indexes, spawn queues, and frame count. It then creates controlled objects, such as test paths, towers, and enemies, and directly calls the same methods used during gameplay. For example, it tests whether towers upgrade correctly depending on the current map, whether cannon towers ignore flying enemies, whether ice towers prioritise unslowed ground enemies, whether physical and magic resistance affect damage correctly, and whether split enemies create child enemies after death. It also checks the wave system by testing startWave() and spawnCurrentWave() to make sure enemies are added to the game at the correct time. This makes it possible to find logic errors in the core systems before testing the full game through normal player interaction.
 
 ### Black box
 Throughout the development process, we have been conducting black box testing, focusing on interacting with the game from the player's perspective to verify if the functionality is working as expected. This method helped us identify and solve several key problems.
@@ -265,11 +266,16 @@ From a societal perspective, games have the potential to encourage interaction a
 Games have a significant impact on individuals, especially in terms of user experience, learning, and happiness. Although it can provide entertainment, the relatively high difficulty may lead to increased frustration and decreased satisfaction for some players. Users who strive for progress may feel discouraged, which can have a negative impact on motivation and overall enjoyment. This is consistent with the evaluation results, where as the difficulty increases, the workload increases, and the usability score decreases. In addition, prolonged exposure to a challenging and potentially frustrating system may lead to mental fatigue. To enhance individual sustainability, it is important to balance challenge and usability by providing clearer feedback, smoother learning curves, and potentially adjustable difficulty levels, ensuring that the game remains attractive without negatively impacting user interest.
 
 # Conclusion
+Developing our tower defence game challenged and improved our understanding of the full software development process. At the beginning of the project, we collected a range of possible game ideas and discussed their strengths, weaknesses, and feasibility. We then narrowed these ideas down into one clear tower defence concept, which allowed us to focus on a game that was both achievable within the deadline and enjoyable for players.
 
-- 10% ~500 words
+Using Agile-style planning also helped us organise the project more clearly. By writing epics, user stories, and acceptance criteria, we were able to break the game down into smaller features, such as placing towers, spawning enemies, upgrading towers, pausing the game, and completing levels. This made the development process easier to manage and gave us clearer goals for what each feature needed to achieve. Creating class diagrams and sequence diagrams also helped us understand how the main systems, such as towers, enemies, waves, projectiles, maps, and UI, should interact with each other.
 
-- Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
-- 
+Evaluation was another valuable part of the project. Qualitative Evaluation, including think-aloud testing and heuristic evaluation, helped us understand how real users experienced the game. These methods revealed issues such as unclear feedback, confusing controls, and areas where players needed more guidance. Quantitative Evaluation, including SUS and NASA-TLX, gave us measurable feedback about usability and workload, which helped support our design decisions with evidence rather than personal opinion.
+
+We also learnt the value of both black-box and white-box testing. Black-box testing allowed us to check whether the game behaved correctly from the player’s perspective, while white-box testing helped us test the internal logic directly, such as tower upgrades, enemy damage, slowing effects, split enemies, and wave spawning. This made debugging more efficient and helped us find problems that were not always obvious during normal gameplay.
+
+Looking forward, there are several improvements we would make to the current game. We would improve the save and continue system, polish the user interface, add clearer gameplay feedback, and continue balancing the difficulty of each level. If we had the opportunity to develop a sequel, we would add more tower types, enemies with special abilities, and more complex maps with branching paths or environmental effects.  Finally, considering sustainability encouraged us to think about performance, maintainability, accessibility, and how the project could continue to develop beyond the current version. Overall, this project gave us valuable experience in teamwork, planning, programming, testing, and reflecting on a complete software engineering project.
+
 
 # Contribution statement
 
