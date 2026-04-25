@@ -34,7 +34,7 @@ VIDEO. Include a demo video of your game here
 | 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
 | 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
 | 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
-| 5 | Zishen Xu | chuichisum@163.com | Report & Supporter |
+| 5 | Zishen Xu | chuichisum@163.com | Coder & Report |
 
 # Introduction
 
