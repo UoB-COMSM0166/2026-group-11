@@ -1,9 +1,0 @@
-html, body {
-  /* Remove browser spacing so the p5 canvas can fill the window exactly. */
-  margin: 0;
-  padding: 0;
-}
-canvas {
-  /* Block display prevents inline canvas gaps below the game area. */
-  display: block;
-}
