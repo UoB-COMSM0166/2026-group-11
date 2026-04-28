@@ -45,10 +45,18 @@ Players will build different types of defense towers to protect their village fr
 ## Defensive Towers
 | Tower Type | Image | Description |
 |------------|-------|-------------|
-| Archery Tower |<img width="457" height="657" alt="tower2" src="https://github.com/user-attachments/assets/af7b8802-013b-4be1-9a71-cbdbf7a21c98" /> | The cheapest tower deals a small amount of physical damage within its attack range.|
-| Magic Tower | <img width="414" height="427" alt="tower1" src="https://github.com/user-attachments/assets/8abc3787-0faa-4eed-9885-ba528511cecd" /> | Ignores armor, deals magic damage within the attack range.|
-| Cannon Tower | <img width="457" height="657" alt="tower3" src="https://github.com/user-attachments/assets/2e983e7e-37fd-4259-89b4-f363c50ea82b" />| Deals area-of-effect physical damage within the attack range, focusing primarily on areas with a high concentration of monsters. |
-| Ice Tower | <img width="424" height="433" alt="tower4" src="https://github.com/user-attachments/assets/46b11b34-2670-4f40-bcfe-4bf9d5af13f3" /> | Slows the enemy's movement speed and deals a small amount of magic damage.. |
+| Archery Tower Level 1 |<img width="457" height="657" alt="tower2" src="https://github.com/user-attachments/assets/af7b8802-013b-4be1-9a71-cbdbf7a21c98" /> | The cheapest tower deals a small amount of physical damage within its attack range.|
+| Archery Tower Level 2 |<img width="424" height="433" alt="tower2_lv2" src="https://github.com/user-attachments/assets/64488e59-daf5-40e7-a7b4-65a21d1a7706" /> | 介绍 |
+| Archery Tower Level 3 |<img width="424" height="433" alt="tower2_lv3" src="https://github.com/user-attachments/assets/3d6633f6-868a-432c-a6c1-6ab3a27cf6ce" />| 介绍 |
+| Magic Tower Level 1 | <img width="414" height="427" alt="tower1" src="https://github.com/user-attachments/assets/8abc3787-0faa-4eed-9885-ba528511cecd" /> | Ignores armor, deals magic damage within the attack range.|
+| Magic Tower Level 2 | <img width="424" height="433" alt="tower1_lv2" src="https://github.com/user-attachments/assets/186a34c6-0836-46db-bd9e-13a3115ab420" /> |介绍|
+| Magic Tower Level 3 | <img width="424" height="433" alt="tower1_lv3" src="https://github.com/user-attachments/assets/f8a1befc-ccd3-4f31-bc4d-634bc669dcc7" /> |介绍|
+| Cannon Tower Level 1 | <img width="457" height="657" alt="tower3" src="https://github.com/user-attachments/assets/2e983e7e-37fd-4259-89b4-f363c50ea82b" />| Deals area-of-effect physical damage within the attack range, focusing primarily on areas with a high concentration of monsters. |
+| Cannon Tower Level 2 | <img width="424" height="433" alt="tower3_lv2" src="https://github.com/user-attachments/assets/3aba1165-7714-46e1-835f-98dd3ed498c1" /> |介绍|
+| Cannon Tower Level 3 | <img width="424" height="433" alt="tower3_lv3" src="https://github.com/user-attachments/assets/91f1fef5-ac80-4c26-b505-00a5a1b5807b" /> |介绍|
+| Ice Tower Level 1 | <img width="424" height="433" alt="tower4" src="https://github.com/user-attachments/assets/46b11b34-2670-4f40-bcfe-4bf9d5af13f3" /> | Slows the enemy's movement speed and deals a small amount of magic damage.. |
+| Ice Tower Level 2 | <img width="424" height="433" alt="tower4_lv2" src="https://github.com/user-attachments/assets/6885c8f2-7272-435b-aec9-5467cc970043" /> |介绍|
+| Ice Tower Level 3 | <img width="424" height="433" alt="tower4_lv3" src="https://github.com/user-attachments/assets/b867bacc-1abd-4cdb-912a-d5a9857e8678" /> |介绍|
 
 ## Partial enemies
 
