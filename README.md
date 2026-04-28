@@ -63,9 +63,21 @@ Players will build different types of defense towers to protect their village fr
 | Monster Type | Image | Description |
 |--------------|-------|-------------|
 | Baby Slime | <img width="32" height="24" alt="Black_Slime" src="https://github.com/user-attachments/assets/f9e1a700-4710-4b88-8d80-211f838544bd" /> | The lowest-level slime, with low health and low armor, can be easily defeated. |
+| Black Slime | <img width="32" height="24" alt="Black_Slime" src="https://github.com/user-attachments/assets/1bd14b8e-343c-4554-b986-cc60f70183c4" /> |介绍|
+| Crime Slime | <img width="44" height="32" alt="Crimslime" src="https://github.com/user-attachments/assets/1dd89f73-0600-4d48-ba8c-a9147079e18c" /> |介绍|
+| Dungeon Slime | <img width="44" height="32" alt="Dungeon_Slime" src="https://github.com/user-attachments/assets/8bb5ad5f-ea33-45db-a061-33c428e20378" /> |介绍|
+| Green Slime | <img width="32" height="24" alt="Green_Slime" src="https://github.com/user-attachments/assets/b9dbf4ba-d75f-44f8-aeb3-54cbe9f8caf4" /> |介绍|
+| Mother Slime | <img width="44" height="32" alt="Mother_Slime" src="https://github.com/user-attachments/assets/aac1be4c-a83a-4fdb-bbd2-7494381efdb8" /> |介绍|
+| Purple Slime | <img width="32" height="24" alt="Purple_Slime" src="https://github.com/user-attachments/assets/d378d3f6-1b81-4b06-ab81-ac54e0794fe8" /> |介绍|
+| Red Slime | <img width="32" height="24" alt="Red_Slime" src="https://github.com/user-attachments/assets/f0e06310-aa88-40fa-bf28-eb6853456692" /> |介绍|
+| Glow Slime | <img width="36" height="30" alt="glow_Slime" src="https://github.com/user-attachments/assets/9c1e40b3-d428-420a-9481-bb0a31eacc1c" /> |介绍|
+| Gold Slime | <img width="34" height="24" alt="gold_Slime" src="https://github.com/user-attachments/assets/91bce274-a99f-4b0b-b5dd-7651de96d849" /> |介绍|
 | Ice spike Slime | <img width="40" height="30" alt="Spiked_Ice_Slime" src="https://github.com/user-attachments/assets/c911a855-47e7-421f-afac-18237fcf0617" /> | High health and physical defense; attacking with a magic tower is very effective. |
 | Crystal Slime | <img width="38" height="30" alt="Crystal_Slime" src="https://github.com/user-attachments/assets/a8ff7869-9d90-400b-971b-471aa9da5b10" /> | With high health and magic defense, attacking with cannons is very effective. |
 | Rainbow Slime | <img width="70" height="46" alt="Rainbow_Slime" src="https://github.com/user-attachments/assets/1ed15559-f92e-4bd5-86a1-a73f57ea2008" /> | Very slow, but with extremely high HP and both physical and magical defense—do everything you can to stop it.|
+| King Slime | <img width="166" height="152" alt="King_Slime" src="https://github.com/user-attachments/assets/b03e2ca7-b963-40de-8b25-b96189e00b63" /> |介绍|
+| Gastropod | <img width="30" height="32" alt="Gastropod" src="https://github.com/user-attachments/assets/43377ff6-5f41-4513-8b4a-36aaf3f078fd" /> |介绍|
+| Spectral Gastropod | <img width="32" height="34" alt="Spectral_Gastropod" src="https://github.com/user-attachments/assets/1496b164-4bf6-431e-84a9-3d848b8d2b30" /> |介绍|
 
 # Requirements
 ## 2.1 Early stages design
