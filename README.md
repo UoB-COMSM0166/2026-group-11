@@ -13,17 +13,60 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 [Click here to watch the demo video](https://drive.google.com/file/d/1NNac17kYhQpIFFcfJK7L5xvaH5aljUwt/view?usp=drive_link)
 
 # Table of Contents
+
 1. [Team](#team)
+
 2. [Introduction](#introduction)
+   - [Defensive Towers](#defensive-towers)
+   - [Enemies](#enemies)
+
 3. [Requirements](#requirements)
+   - [2.1 Early stages design](#21-early-stages-design)
+   - [2.2 Requirement elicitation and refinement](#22-requirement-elicitation-and-refinement)
+   - [2.3 Stakeholders](#23-stakeholders)
+   - [2.4 Epics, User Stories and Acceptance Criteria](#24-epics-user-stories-and-acceptance-criteria)
+   - [2.5 Use Case Diagram](#25-use-case-diagram)
+   - [2.6 Reflection](#26-reflection)
+
 4. [Design](#design)
+   - [3.1 System Architecture](#31-system-architecture)
+   - [3.2 Class Diagram](#32-class-diagram)
+   - [3.3 Behavioural Diagram](#33-behavioural-diagram)
+   - [3.4 Design Reflection](#34-design-reflection)
+
 5. [Implementation](#implementation)
+   - [Challenge 1: Different defence towers](#challenge-1-different-defence-towers)
+     - [Ice Tower targeting](#ice-tower-targeting)
+     - [Cannon Tower splash targeting](#cannon-tower-splash-targeting)
+   - [Challenge 2: Boss design](#challenge-2-boss-design)
+     - [Boss split and revive](#boss-split-and-revive)
+     - [Boss targeting the most valuable tower](#boss-targeting-the-most-valuable-tower)
+
 6. [Evaluation](#evaluation)
+   - [Qualitative evaluation](#qualitative-evaluation)
+     - [Think Aloud Evaluation](#think-aloud-evaluation)
+   - [Heuristic Evaluation](#heuristic-evaluation)
+   - [Quantitative Evaluation](#quantitative-evaluation)
+     - [NASA TLX](#nasa-tlx)
+     - [SUS](#sus)
+   - [How code was tested](#how-code-was-tested)
+     - [White box](#white-box)
+     - [Black box](#black-box)
+
 7. [Process](#process)
-8. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
+   - [Collaboration](#collaboration)
+   - [Tools](#tools)
+
+8. [Sustainability, ethics and accessibility](#sustainability-ethics-and-accessibility)
+   - [Environmental](#environmental)
+   - [Social](#social)
+   - [Individual](#individual)
+
 9. [Conclusion](#conclusion)
-10. [Contribution Statement](#contribution-statement)
-11. [AI Statement](#ai-statement)
+
+10. [Contribution statement](#contribution-statement)
+
+11. [AI statement](#ai-statement)
 
 # Team
 
