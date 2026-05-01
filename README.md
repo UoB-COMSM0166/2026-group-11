@@ -178,7 +178,18 @@ As the game became more crowded, we realised that the player needed more than ju
 These epics and user stories gave us a more practical way to discuss progress as a team. They also helped us define what counted as “finished” for a feature. For example, an upgrade button was not complete just because it appeared on screen; it also needed to check the player’s gold, update the tower’s statistics and give the player clear feedback that the upgrade had happened.
 
 ## 2.5 Use case diagram
-<img width="932" height="494" alt="case diagram" src="https://github.com/user-attachments/assets/0705505a-1ad3-4f4a-9b64-c0436f596fa1" />
+
+The use case diagram summarises the main actions available to the **player** during the game. It helped us check that the requirements covered a complete gameplay flow, from starting the game and selecting a level to placing towers, upgrading towers, pausing the game, and reaching either victory or defeat.
+
+The diagram also shows where the system needs to respond to player actions. For example, when the player places or upgrades a tower, the game must check whether the position is valid and whether the player has enough **gold**. When enemies reach the village, the system updates **health** and eventually displays the correct result screen. In this way, the diagram connected our requirements to the later design and implementation work.
+
+<p align="center">
+  <img width="932" height="494" alt="Use case diagram" src="https://github.com/user-attachments/assets/0705505a-1ad3-4f4a-9b64-c0436f596fa1" />
+</p>
+
+<p align="center">
+  <strong>Figure 3: Use case diagram showing the main player interactions in Sunnyvale Gate.</strong>
+</p>
 
 ## 2.6 Reflection
 Working on this PvE tower defense game taught us how structured requirements can shape a project from the start. By defining epics, we broke the game into meaningful core PvE loop, combat feedback, game balance, and other features. This helped us see the big picture while keeping focused on what matters most for a player defensive experience.
