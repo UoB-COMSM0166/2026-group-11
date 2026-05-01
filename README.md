@@ -191,21 +191,23 @@ We also learned that requirements change once the game becomes playable. Tower b
 
 ## 3.1 System Architecture
 
-**Sunnyvale Gate** was designed as a browser-based p5.js game. We kept the structure fairly simple because the game had to run directly from the `docs` folder on GitHub Pages, and because several group members were still learning JavaScript and p5.js. The main file, `sketch.js`, works as the central controller. It handles the p5.js lifecycle functions such as `preload()`, `setup()`, `draw()` and `mousePressed()`, which means it controls loading assets, creating the canvas, updating each frame and responding to player input.
+**Sunnyvale Gate** was designed as a browser-based p5.js game that runs from the `docs` folder on GitHub Pages. We kept the overall structure simple because the project needed to be playable in the browser, and because our group was still learning JavaScript and p5.js while building the game.
 
-The game uses a scene-based flow. A global `gameState` value switches between the home screen, comic introduction, level selection and gameplay. This was not a very complex design, but it worked well for our project. It kept the player journey clear: start the game, read the introduction, choose a map, play the level, and then reach victory or defeat.
+The main file is `sketch.js`, which acts as the central controller. It uses the p5.js lifecycle functions `preload()`, `setup()`, `draw()` and `mousePressed()` to load assets, create the canvas, update the game every frame and handle player input. A global `gameState` variable controls the main scene flow, including the home screen, comic introduction, level selection and gameplay. This gave the game a clear player journey without needing a more complicated screen management system.
 
-A large part of the game is data-driven. Map information is stored in `maps.js`, enemy values are stored in `ENEMY_TYPES`, and tower values are stored through `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Waves are defined in `LEVEL_WAVE_CONFIGS`. This helped us during balancing, because we could change enemy health, tower range or wave timing without rewriting the whole battle system.
+Several design choices came directly from the requirements in Section 2. For example, the requirements for **enemy waves**, **tower upgrades**, **gold**, and **valid tower placement** meant that the game needed data that could be changed easily. For this reason, map data is stored in `maps.js`, enemy values are stored in `ENEMY_TYPES`, and tower values are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Wave patterns are defined in `LEVEL_WAVE_CONFIGS`. This data-driven approach made balancing easier, since we could adjust health, damage, range or wave timing without rewriting the whole battle system.
 
-During gameplay, the main active objects are stored in arrays such as `towers`, `enemies` and `lasers`. Each frame, the game updates enemy movement, tower targeting, projectiles, visual effects, gold, village health and win-or-lose checks. This fits p5.js well, because the `draw()` loop naturally repeats and redraws the game world.
+During a level, active objects are stored in arrays such as `towers`, `enemies` and `lasers`. Each frame, the game updates enemy movement, tower targeting, projectiles, visual effects, player gold, village health and win-or-lose checks. This fits p5.js well because the `draw()` loop already works as a repeated update cycle.
 
-We also tried to separate responsibilities across different files. `tower.js` contains the `Tower` class and tower targeting logic. `enemy.js` contains the `Enemy` class and boss behaviour. `game_systems.js` manages waves, spawning, victory and defeat checks. `towereffect.js` contains projectile and visual effect classes such as `CannonBomb`, `ArrowProjectile`, `Laser` and `ExplosionEffect`. Smaller systems, such as sound, pause, speed control and tutorial guidance, are kept in their own files. This made the code easier to change, although `sketch.js` still became quite large because many UI actions are handled there.
+We also separated key responsibilities across different files. `tower.js` handles tower behaviour, `enemy.js` handles enemy and boss behaviour, `game_systems.js` manages waves and level state, and `towereffect.js` handles projectiles and combat effects. Smaller systems, such as sound, pause, speed control and tutorial guidance, are kept separately. This helped us work on different parts of the game without constantly changing the same file, although `sketch.js` still became larger than we would have liked.
 
 ## 3.2 Class Diagram
 
-The class diagram below shows the main static structure of the game. It follows the OO design idea from the workshop that objects should group related state and behaviour together. In our implementation, `Tower` stores position, type, level, range, damage and cooldown, and it also contains methods for upgrading, finding targets and attacking. `Enemy` stores health, speed, resistance, path progress and special flags such as flying or boss state.
+The class diagram below shows the main static structure of the game. Some parts of the diagram represent JavaScript classes, while others represent modules or controller-style responsibilities. This is because the final game uses a mix of object-oriented code and p5.js-style global functions.
 
-Projectile and effect objects are more temporary. They are created during combat, updated for a short time, and removed after their damage or animation has finished. This kept combat feedback separate from the tower and enemy classes.
+The main object classes are `Tower`, `Enemy` and the projectile/effect classes. `Tower` stores information such as position, type, level, range, damage and cooldown. It also contains behaviour for upgrading, finding targets and attacking. `Enemy` stores health, speed, resistance and path progress, as well as special states such as flying enemies or boss behaviour. Projectile and effect objects, such as arrows, lasers and cannon bombs, are created during combat and removed once their animation or damage has finished.
+
+This design follows the object-oriented idea from the workshop that related state and behaviour should be grouped together. It is not a deep inheritance hierarchy, but that was intentional. For a p5.js game, a flatter structure was easier for our group to understand, test and extend.
 
 ```mermaid
 classDiagram
@@ -304,15 +306,17 @@ classDiagram
   <strong>Figure 6: Sequence diagram showing the main gameplay flow.</strong>
 </p>
 
-The behavioural diagram describes the main player flow. The player starts from the home screen, moves through the comic introduction and level selection, then enters a map. During the level, the player places or upgrades towers while the system spawns enemies and updates the battle.
+The sequence diagram shows the game from the player’s point of view. The player starts from the home screen, moves through the comic introduction and level selection, and then enters a map. Once the level begins, the system loads the map, starts enemy waves and updates the battle continuously.
 
-The same loop continues until the game reaches a victory or defeat condition. The sequence diagram was useful because it showed that gameplay is not only about individual objects. It is also about communication between the player, UI, map loading, wave system, towers and enemies.
+During gameplay, the player can place or upgrade towers. The system then checks the player’s gold, creates or updates the tower, and lets the tower attack enemies in range. The loop continues until the village is destroyed or all required waves are cleared. This diagram was useful because it showed the flow between the player, UI, map loading, wave system, towers and enemies, rather than only showing isolated objects.
 
 ## 3.4 Design Reflection
 
-Overall, the design was simple but practical. It used some OO ideas, especially encapsulation and object responsibility, without trying to force a complicated class hierarchy. This suited p5.js and our team better than an over-designed structure.
+The design was simple, but it matched the size of our project. Using p5.js meant that a repeated frame update was natural, and the `draw()` loop gave us a straightforward way to update enemies, towers, effects and game state.
 
-One limitation is that `sketch.js` still became quite large. If we continued development, we would probably split the UI and scene management code into separate modules. That would make the central game loop easier to read and reduce the chance of later changes affecting unrelated parts of the game.
+The main strength of the design was that the important gameplay values were stored as data. This made it easier to balance towers, enemies and waves after testing. It also supported the requirements from Section 2, where we needed different tower roles, enemy types and difficulty pacing.
+
+The main weakness was that `sketch.js` still handled too many responsibilities by the end of the project, especially scene control and UI interaction. If we continued development, we would split these parts into separate modules. That would make the central game loop easier to read and reduce the risk of small UI changes affecting unrelated gameplay logic.
 
 # Implementation
 
