@@ -658,11 +658,11 @@ Looking forward, there are several improvements we would make to the current gam
 
 | Contributor | Contribution |
 |------------|-------------|
-| Yi Lin | 1 |
-| Chuhang Li | 1 |
-| Yuxuan Cheng | 1 |
-| Wen Liang | 1 |
-| Zishen Xu | 1 |
+| Yi Lin | 20% |
+| Chuhang Li | 20% |
+| Yuxuan Cheng | 20% |
+| Wen Liang | 20% |
+| Zishen Xu | 20% |
 
 
 
