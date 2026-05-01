@@ -120,7 +120,23 @@ Overall, this process helped us turn a broad idea into a set of requirements tha
 
 ## 2.3 Stakeholders
 
-<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
+When writing the requirements, we first tried to identify who the game was being made for and who would be affected by our design decisions. This followed the requirements engineering process from the lecture, where stakeholder identification comes before writing epics, user stories and acceptance criteria. For our project, this was useful because the requirements were not only about what we wanted to code, but also about what players, designers, testers and course markers needed from the game.
+
+The main stakeholders were the **players**. Their needs shaped the core gameplay requirements, because the game had to be understandable before it could be enjoyable. Players needed to see **enemy paths**, understand where towers could be placed, track **gold** and **health**, and receive clear feedback when they won or lost a level. These needs later influenced requirements such as fixed tower-building positions, visible UI information and clear tower upgrade behaviour.
+
+The **development team** was also an important stakeholder group. Since we had limited previous experience with game development, our requirements had to stay realistic. This influenced the decision to remove online multiplayer and focus on a single-player PvE game. It also encouraged us to use requirements that could be implemented and tested more easily, such as configurable enemy waves, separate map data and reusable tower statistics.
+
+We also considered **game designers**, **artists**, **testers** and **course staff**. Designers cared about tower roles, enemy variety and difficulty balance. Artists affected requirements related to seasonal maps, tower sprites and enemy readability. Testers needed requirements that could be checked clearly, such as whether towers attack enemies in range or whether gold is deducted after an upgrade. Course staff and markers were indirect stakeholders because the project also had to show evidence of requirements analysis, design, implementation, evaluation and testing.
+
+The stakeholder diagram below summarises these groups and shows how they relate to the game requirements.
+
+<p align="center">
+  <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
+</p>
+
+<p align="center">
+  <strong>Figure 2: Stakeholder diagram for Sunnyvale Gate.</strong>
+</p>
 
 ## 2.4 Epics & User Stories & Acceptance Criteria
 
