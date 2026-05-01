@@ -38,11 +38,11 @@ VIDEO. Include a demo video of your game here
 
 # Introduction
 
-Sunnyvale Gate is a browser-based tower defence game developed with p5.js. The idea came from two games that several members of our group liked: Stardew Valley and Kingdom Rush. We wanted to borrow the warm seasonal style of Stardew Valley, but combine it with the clearer goals and strategy of a tower defence game.
+**Sunnyvale Gate** is a browser-based tower defence game developed with p5.js. The concept was inspired by two games that several members of our group enjoyed: *Stardew Valley* and *Kingdom Rush*. We wanted to draw on the warm seasonal style of *Stardew Valley*, while combining it with the clearer goals and strategic gameplay of a tower defence game.
 
-In the game, the player protects a village from waves of slime enemies across four seasonal maps: spring, summer, autumn and winter. The player earns gold by defeating enemies, then uses it to build or upgrade towers. Different enemies have different health, speed and resistance values, so the player needs to think about which tower to build and when to upgrade it.
+In the game, the player protects a village from waves of slime enemies across four seasonal maps: spring, summer, autumn and winter. The player earns gold by defeating enemies, then uses it to build or upgrade towers. Different enemies have different health, speed and resistance values, so the player needs to decide which towers to build and when to upgrade them.
 
-Our main twist is that the game uses a cosy farming-game atmosphere but adds more specialised tower behaviours. For example, the Frost Tower is designed to slow enemies that have not already been slowed, while the Cannon Tower attacks areas where enemies are most concentrated. The final level also includes a boss with special behaviours, including splitting, reviving and attacking the player’s most valuable tower. These features became the main technical challenges during implementation.
+Our main twist is that the game uses a cosy farming-game atmosphere while adding more specialised tower behaviours. For example, the Frost Tower slows enemies that have not already been slowed, while the Cannon Tower attacks areas where enemies are most concentrated. The final level also includes a boss with special behaviours, including splitting, reviving and attacking the player’s most valuable tower. These features became the main technical challenges during implementation.
 
 ## Defensive Towers
 | Tower Type | Image | Description |
