@@ -83,15 +83,22 @@ Our main twist is that the game uses a cosy farming-game atmosphere while adding
 | Spectral Gastropod | <img width="32" height="34" alt="Spectral_Gastropod" src="https://github.com/user-attachments/assets/1496b164-4bf6-431e-84a9-3d848b8d2b30" /> | The Spectral Gastropod is a stronger flying enemy, with **180 HP** and **speed 3.0**. It appears later to increase air-path pressure. |
 
 # Requirements
+
 ## 2.1 Early stages design
 
-<div align="center">
+At the beginning of the project, we held several online meetings to share possible game ideas. The two directions we discussed most were a rhythm game and a tower defence game. We were more confident with the tower defence idea because it had a clearer structure: enemies follow a path, players place towers, and the game has a simple win-or-lose goal.
+
+Our early plan was more ambitious than the final version. Until around the third week, we planned to make a multiplayer online tower defence game, where each player could build defensive towers and deploy attacking units. To explore this idea, we used PowerPoint to make a simple prototype and also sketched some layouts on paper. These prototypes helped us discuss the idea more clearly, even though they also showed that the design was not yet practical enough.
 
 https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
 
-<strong>Figure 1: Early prototype video used to discuss the original multiplayer tower defence idea.</strong>
+<p align="center">
+  <strong>Figure 1: Early prototype video used to discuss the original multiplayer tower defence idea.</strong>
+</p>
 
-</div>
+During later discussions, we realised that the multiplayer version would be difficult to complete within the time available, especially because our group had little previous experience with game development. Online synchronisation, competitive balancing and multiplayer interaction rules would have added too much risk before we had finished the basic tower defence loop. Because of this, we reduced the scope and decided to build a single-player tower defence game inspired by <em>Kingdom Rush</em>.
+
+Over the following weeks, we used stakeholders, epics, user stories and acceptance criteria to make the game requirements clearer. This helped us move from a general idea to a set of features that could actually be implemented, such as level selection, tower placement, enemy waves, gold rewards and tower upgrades. We also created a use case diagram to describe the overall player workflow and to guide the later design and implementation work.
 
 ## 2.3 Stakeholders
 
