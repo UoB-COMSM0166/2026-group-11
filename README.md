@@ -211,11 +211,17 @@ We also separated key responsibilities across different files. `preload_assets.j
 
 ## 3.2 Class Diagram
 
-The class diagram below shows the main static structure of the game. Some parts of the diagram represent JavaScript classes, while others represent modules or controller-style responsibilities. This is because the final game uses a mix of object-oriented code and p5.js-style global functions.
+The class diagram below summarises the main static structure of the game. It is based on the actual code rather than an ideal design only. Some parts, such as `Tower` and `Enemy`, are implemented as classes in the project. Others, like wave management and sound control, are closer to modules or controller-style responsibilities. We kept them in the diagram because they still play an important role in how the game is organised.
 
-The main object classes are `Tower`, `Enemy` and the projectile/effect classes. `Tower` stores information such as position, type, level, range, damage and cooldown. It also contains behaviour for upgrading, finding targets and attacking. `Enemy` stores health, speed, resistance and path progress, as well as special states such as flying enemies or boss behaviour. Projectile and effect objects, such as arrows, lasers and cannon bombs, are created during combat and removed once their animation or damage has finished.
+The most central gameplay class is `Tower`, defined in `tower.js`. It stores information such as position, tower type, level, range, damage and cooldown. More importantly, it also handles behaviour. A tower can upgrade itself, search for enemies, choose different targets depending on its type, and attack when the cooldown allows it. Since our four main tower types behave differently, putting this logic inside the class made the code easier to follow.
 
-This design follows the object-oriented idea from the workshop that related state and behaviour should be grouped together. It is not a deep inheritance hierarchy, but that was intentional. For a p5.js game, a flatter structure was easier for our group to understand, test and extend.
+`Enemy`, defined in `enemy.js`, is the main class on the other side of combat. It stores movement, health, resistances and path progress, but it also includes behaviour such as taking damage, updating position and applying slow effects. In our game, enemy behaviour is not completely uniform. Boss enemies add more complex logic, including special movement and abilities, so the `Enemy` class ended up carrying both ordinary enemy behaviour and boss-related extensions.
+
+The combat effect classes are grouped in `towereffect.js`. These include `ArrowProjectile`, `Laser`, `CannonBomb`, and several short-lived effect classes such as `ExplosionEffect`, `ArrowHitEffect`, `MagicHitEffect`, `TowerUpgradeEffect` and `TowerSellEffect`. These objects are temporary. They are created during battle, shown for a short period, and then removed. Separating them from `Tower` and `Enemy` helped keep combat feedback more readable.
+
+Functions in `game_systems.js` manage wave progression, enemy spawning and victory or defeat checks. Strictly speaking, this part is more procedural than object-oriented, but in the diagram it is still useful to show it as a system-level component because towers and enemies both depend on the larger game flow. The same applies to sound and scene control: they are not the heart of combat, but they support the overall architecture.
+
+This design is not highly abstract, and that was intentional. For a browser game built with p5.js, a flatter structure suited the project better than a complicated inheritance hierarchy. It was easier to debug, easier to extend, and easier for the whole group to understand.
 
 ```mermaid
 classDiagram
@@ -241,6 +247,7 @@ classDiagram
         +findBestSplashTarget()
         +findBestIceTarget()
         +update()
+        +display()
     }
 
     class Enemy {
@@ -251,9 +258,34 @@ classDiagram
         +armour
         +magicResist
         +pathIndex
-        +update()
         +takeDamage()
+        +update()
         +applySlow()
+        +display()
+    }
+
+    class CannonBomb {
+        +damage
+        +splashRadius
+        +update()
+        +display()
+    }
+
+    class ArrowProjectile {
+        +damage
+        +update()
+        +display()
+    }
+
+    class Laser {
+        +target
+        +update()
+        +display()
+    }
+
+    class ExplosionEffect {
+        +update()
+        +display()
     }
 
     class WaveSystem {
@@ -264,44 +296,22 @@ classDiagram
         +isLevelDefeat()
     }
 
-    class ProjectileEffect {
-        +update()
-        +display()
-    }
-
-    class CannonBomb {
-        +damage
-        +splashRadius
-        +explode()
-    }
-
-    class ArrowProjectile {
-        +damage
-        +update()
-    }
-
-    class Laser {
-        +target
-        +display()
-    }
-
-    class SoundManager {
+    class SoundSystem {
         +playTowerAttackSfx()
         +playTowerUpgradeSfx()
         +setGameSoundsMuted()
     }
 
-    GameController --> WaveSystem
     GameController --> Tower
     GameController --> Enemy
-    GameController --> ProjectileEffect
+    GameController --> WaveSystem
+    GameController --> SoundSystem
     Tower --> Enemy : targets
-    Tower --> ProjectileEffect : creates
+    Tower --> ArrowProjectile : creates
+    Tower --> CannonBomb : creates
+    Tower --> Laser : creates
+    CannonBomb --> ExplosionEffect : triggers
     WaveSystem --> Enemy : spawns
-    CannonBomb --|> ProjectileEffect
-    ArrowProjectile --|> ProjectileEffect
-    Laser --|> ProjectileEffect
-    GameController --> SoundManager
 ```
 
 ## 3.3 Behavioural Diagram
