@@ -10,7 +10,7 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 [Click here to play the game](https://uob-comsm0166.github.io/2026-group-11/)
 
 ## Demo Video
-[Click here to watch the demo video](https://drive.google.com/file/d/1NNac17kYhQpIFFcfJK7L5xvaH5aljUwt/view?usp=drive_link))
+[Click here to watch the demo video](https://drive.google.com/file/d/1NNac17kYhQpIFFcfJK7L5xvaH5aljUwt/view?usp=drive_link)
 
 # Table of Contents
 1. [Team](#team)
