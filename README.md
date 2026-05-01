@@ -197,9 +197,17 @@ The main file is `sketch.js`, which acts as the central controller. It uses the 
 
 Several design choices came directly from the requirements in Section 2. For example, the requirements for **enemy waves**, **tower upgrades**, **gold**, and **valid tower placement** meant that the game needed data that could be changed easily. For this reason, map data is stored in `maps.js`, enemy values are stored in `ENEMY_TYPES`, and tower values are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Wave patterns are defined in `LEVEL_WAVE_CONFIGS`. This data-driven approach made balancing easier, since we could adjust health, damage, range or wave timing without rewriting the whole battle system.
 
+<p align="center">
+  <img src="docs/assets/system_architecture_overview.png" alt="System architecture overview" width="900" />
+</p>
+
+<p align="center">
+  <strong>Figure 6: System architecture overview of Sunnyvale Gate.</strong>
+</p>
+
 During a level, active objects are stored in arrays such as `towers`, `enemies` and `lasers`. Each frame, the game updates enemy movement, tower targeting, projectiles, visual effects, player gold, village health and win-or-lose checks. This fits p5.js well because the `draw()` loop already works as a repeated update cycle.
 
-We also separated key responsibilities across different files. `tower.js` handles tower behaviour, `enemy.js` handles enemy and boss behaviour, `game_systems.js` manages waves and level state, and `towereffect.js` handles projectiles and combat effects. Smaller systems, such as sound, pause, speed control and tutorial guidance, are kept separately. This helped us work on different parts of the game without constantly changing the same file, although `sketch.js` still became larger than we would have liked.
+We also separated key responsibilities across different files. `preload_assets.js` handles asset loading, `maps.js` stores map layouts and build slots, `tower.js` manages tower behaviour and upgrade values, and `enemy.js` handles enemy movement and boss behaviour. In addition, `game_systems.js` manages waves, gold, player life and victory or defeat checks, while `towereffect.js` handles combat effects such as arrows, lasers, cannon bombs and explosions. Other supporting systems, including sound, pause control, speed control and tutorial guidance, are placed in separate files. This made the project easier to develop in parallel, even though `sketch.js` still became larger than we originally expected.
 
 ## 3.2 Class Diagram
 
