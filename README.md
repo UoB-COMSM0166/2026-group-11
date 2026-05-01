@@ -192,12 +192,14 @@ The diagram also shows where the system needs to respond to player actions. For 
 </p>
 
 ## 2.6 Reflection
-Working on this PvE tower defense game taught us how structured requirements can shape a project from the start. By defining epics, we broke the game into meaningful core PvE loop, combat feedback, game balance, and other features. This helped us see the big picture while keeping focused on what matters most for a player defensive experience.
 
-Writing user stories forced us to think from each stakeholder's perspective. For a PvE game, this was especially valuable: we had to balance the needs of players seeking challenge with those preferring a more relaxed experience, while also considering testers, designers, and content creators. 
+Working on the requirements made us realise that the game needed a clearer shape before we could build it properly. At the start, we had many ideas, but they were not all equally useful or realistic. Defining epics helped us group the project into areas that made sense for our game, such as the **core PvE loop**, **content and balance**, and **combat feedback**, rather than treating every idea as a separate feature.
 
-Acceptance criteria turned vague ideas into concrete checks. Instead of saying "the game should feel fair," we defined what fair means for our context—synchronized enemy spawning, clear upgrade choices, configurable wave parameters. This gave us a shared understanding of "done" and reduced ambiguity between team members.
+The user stories were also useful because they made us look at the game from more than just the developer’s side. For example, a player would care about whether the game is easy to understand, whether tower choices feel meaningful, and whether the difficulty feels fair. A tester, however, needs something more specific to check. This pushed us to write requirements that were closer to real gameplay, such as placing towers on valid positions, upgrading with **gold**, and showing clear win or defeat feedback.
 
+Acceptance criteria helped most when our ideas were still vague. Instead of saying that “the game should feel balanced”, we had to think about what could actually be observed or tested: enemies should follow the expected path, towers should attack valid targets, upgrades should change tower statistics, and wave data should be adjustable. This gave the team a more shared idea of what counted as finished.
+
+One thing we learned is that requirements did not stay fixed after we wrote them. Some parts changed once the game became playable, especially tower balance, enemy difficulty and interface clarity. This was sometimes frustrating, but it also helped us understand requirements as something that develops with the project, not just a document written at the beginning.
 
 # Design
 
