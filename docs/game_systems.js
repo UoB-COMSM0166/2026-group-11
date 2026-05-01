@@ -8,7 +8,7 @@ let waveHasStarted = false;
 const LEVEL_START_GOLD = {
   1: 300,
   2: 300,
-  3: 9999,
+  3: 500,
   4: 8000
 };
 
