@@ -546,43 +546,47 @@ After each fix, we replayed the relevant parts of the game to check whether the 
 
 ## Collaboration
 
-At the beginning of the project, our team spent time exploring possible game ideas instead of deciding too quickly. Yi Lin, Chuhang Li and Yuxuan Cheng collected different game references, including playable links, videos and screenshots, and shared them in a common document. These references helped us compare several directions, such as rhythm games, multiplayer games and tower defence games. At the same time, Wen Liang and Zishen Xu worked on a simple early prototype, where basic shapes were used to represent towers, enemies and the village.
+At the start of the project, we did not choose the final game idea immediately. Instead, we spent the first stage comparing different possibilities. Some members collected references from videos, playable examples and existing games, while others tried to build a very small prototype to see what could actually work in p5.js. This helped us avoid choosing an idea only because it sounded interesting.
 
-This early split of work was useful because it allowed us to explore both **game design ideas** and **technical feasibility** at the same time. The reference collection helped us understand what kind of gameplay we wanted, while the prototype showed what we could realistically build with p5.js.
+Yi Lin, Chuhang Li and Yuxuan Cheng mainly worked on collecting and comparing game ideas at the beginning. They looked at several possible directions, including rhythm games, multiplayer strategy games and tower defence games. The ideas were written into a shared Feishu document, together with reference links and short notes about possible gameplay features.
 
-In the middle of the project, we changed the team roles. We did this partly because we wanted every member to have some experience with the code, not only with writing or planning. After the role exchange, Yi Lin, Chuhang Li and Yuxuan Cheng took more responsibility for game development and helped write the code-related parts of the report. Wen Liang and Zishen Xu focused more on weekly workshop tasks and report writing, but they also continued to give feedback, suggest changes and help with implementation when needed.
+At the same time, Wen Liang and Zishen Xu worked on an early prototype. It was not visually complete. Simple shapes were used to represent towers, enemies and the village. However, it was useful because it showed whether the basic tower defence loop could run in the browser. In this way, our early work covered both **design exploration** and **technical feasibility**.
 
-The role exchange worked well overall. It gave more people a chance to understand how the game was built, and it also made the report easier to connect with the actual code. However, it also reminded us that collaboration becomes harder when responsibilities change halfway through a project. We needed to explain recent code changes more clearly, update each other more often, and make sure that no one was working based on outdated information.
+<p align="center">
+  <img src="docs/assets/process_idea_notes.png" alt="Early idea notes and genre exploration" width="900" />
+</p>
+
+<p align="center">
+  <strong>Figure 17: Early Feishu notes used to collect and compare game ideas.</strong>
+</p>
+
+As the project continued, we changed the team roles. This was an important decision for us. We did not want only one or two people to understand the code while the others only wrote the report. After the role exchange, Yi Lin, Chuhang Li and Yuxuan Cheng took more responsibility for game development and helped write the code-related parts of the report. Wen Liang and Zishen Xu focused more on workshop tasks, report writing and checking whether the report matched the final game, but they still gave feedback on gameplay and helped with code when needed.
+
+This role exchange worked well overall. It allowed more members to understand how the game was built, and it also made the report easier to connect with the actual implementation. At the same time, it created a new problem: communication had to be clearer. When responsibilities changed, some members needed time to understand recent code changes, especially tower behaviour, wave balance and boss logic. We learned that even small updates should be explained clearly, otherwise people could easily work from outdated information.
 
 ## Tools
 
-In the first week, we exchanged contact details and created a WeChat group for daily communication. This became the quickest way for us to share small updates, ask questions and check whether someone had finished a task.
+We used different tools for different kinds of work. WeChat was mainly used for quick communication. It was where we asked short questions, shared progress, arranged meetings and reminded each other about unfinished tasks. Because everyone checked it frequently, it was the fastest way to solve small problems.
 
-During the early idea stage, we also held an online meeting on Zoom and used Feishu to edit shared documents together. This was especially useful when we were comparing different game ideas, because everyone could add references, comments and possible features in the same place.
+For longer discussions, we used Zoom. This was especially useful when we needed to make decisions together, such as choosing the final game direction, changing the scope from multiplayer to single-player PvE, or discussing how to divide the report work.
+
+Feishu was used as our main shared workspace. In the early stage, it helped us collect game ideas and references in one place. Later, we used it for meeting notes, task tracking and recording decisions. Compared with group chat, Feishu was better for information that needed to stay organised.
+
+During development, we also used the group chat to share concrete game data. For example, when we were adjusting tower statistics, enemy values and wave tables, screenshots were posted in the group so that everyone could check the latest numbers. This was useful because game balance changed many times, and written records helped us avoid confusion.
 
 <p align="center">
-  <img width="770" height="558" alt="ideas1" src="https://github.com/user-attachments/assets/47519de9-25ee-40bd-b81f-5081f3c6dbe6" />
+  <img src="docs/assets/process_team_discussion.png" alt="Team discussion of tower and wave data" width="700" />
 </p>
 
 <p align="center">
-  <strong>Figure 17: Early shared document used for collecting and comparing game ideas.</strong>
+  <strong>Figure 18: Team discussion and data sharing during balancing and refinement.</strong>
 </p>
 
-<p align="center">
-  <img width="217" height="392" alt="number" src="https://github.com/user-attachments/assets/bd65a7f6-e36a-4560-98f4-594caaa0eb66" />
-</p>
+We also used a simple Kanban-style task system in Feishu. Tasks were placed under stages such as **To Do**, **In Progress** and **Done**. This helped us see which parts of the project were still waiting, which were being worked on, and which had already been finished. It was not a perfect system, but it gave the team a clearer view of progress.
 
-<p align="center">
-  <strong>Figure 18: Group communication used to arrange discussions and share progress.</strong>
-</p>
+The main difficulty was scheduling. Since team members had different timetables, it was sometimes hard to find a time when everyone could attend a meeting. When that happened, we relied more on written updates, screenshots and short summaries after discussion. This was not as efficient as meeting together, but it helped us keep the project moving.
 
-Throughout the project, we kept communicating through group chat and regular meetings. We usually discussed progress after the Tuesday sessions, and we also arranged online meetings when larger decisions were needed. After meetings, one member would record the key points in Feishu, including what had been decided, what still needed to be improved, and who was responsible for the next task.
-
-We also used a simple Kanban-style board in Feishu to manage progress. Tasks were placed under stages such as **To Do**, **In Progress** and **Done**. This helped us see which parts of the project were moving forward and which parts needed more attention.
-
-Overall, these tools made the project easier to coordinate. WeChat was useful for quick messages, Zoom helped when we needed longer discussions, and Feishu worked well for shared writing and task tracking. The main difficulty was scheduling. Since team members had different timetables, it was sometimes hard to find a meeting time that suited everyone. In those cases, we relied more on written updates and flexible task sharing to keep the project moving.
-
-
+Overall, our process became more organised over time. At first, we mostly shared ideas and tested possibilities. Later, the work became more focused: implementing features, balancing the game, testing, and writing the report. The combination of WeChat, Zoom and Feishu helped us stay connected, while the role exchange gave more members a chance to understand both the game and the documentation.
 # Sustainability, ethics and accessibility
 
 ## Environmental
