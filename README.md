@@ -138,32 +138,44 @@ The stakeholder diagram below summarises these groups and shows how they relate 
   <strong>Figure 2: Stakeholder diagram for Sunnyvale Gate.</strong>
 </p>
 
-## 2.4 Epics & User Stories & Acceptance Criteria
+## 2.4 Epics, User Stories and Acceptance Criteria
 
-### Epic E1: Core PvE Tower Defense Loop
+After identifying the stakeholders, we used epics, user stories and acceptance criteria to organise the requirements. This helped us connect the broad goals of the game to smaller features that could actually be implemented and tested. We also tried to keep the user stories close to the real gameplay, rather than writing them only as technical tasks.
 
-- **US1.1 – Players**: As the player, I want to defend my village against wave after wave of enemies, so that I can experience gameplay with gradually increasing difficulty.
-  - **Acceptance Criteria**: Given that the map has been loaded and the player can place towers on valid tiles, when a wave begins and enemies spawn, then the towers will automatically attack the enemies.
+### Epic E1: Core PvE Tower Defence Loop
 
-- **US1.2 – Players**: As the player, I want to upgrade towers, so that I can eliminate enemies more quickly.
-  - **Acceptance Criteria**: Given that a tower has been selected and the player has sufficient coins, when the player opens the upgrade menu and clicks “Upgrade,” then the coins are immediately deducted, and the tower’s attributes are updated immediately.
+This epic covers the main experience of one level. The player needs to protect the village, place towers, survive enemy waves and understand when the level has been won or lost. Without this loop, the game would not be playable even if the maps and sprites were complete.
 
-- **US1.3 – Players**: As a player, I want the game to clearly inform me when my village health reaches zero, so that I know I have failed the match and can restart.
-  - **Acceptance Criteria**: Given the village has a current health value greater than zero, when an enemy reaches the village center, then the health decreases by the enemy’s damage value.
+- **US1.1 – Player**: As a player, I want to defend my village against waves of enemies, so that I can experience a tower defence game with gradually increasing difficulty.
+  - **Acceptance Criteria**: Given that a level has been loaded and enemies have started to spawn, when enemies enter the range of a placed tower, then the tower should automatically attack valid enemy targets.
 
+- **US1.2 – Player**: As a player, I want to upgrade towers during a level, so that I can respond to stronger enemies instead of only placing more basic towers.
+  - **Acceptance Criteria**: Given that a tower has been selected and the player has enough **gold**, when the player clicks the upgrade option, then the required gold should be deducted and the tower’s level, damage, range or attack behaviour should be updated.
 
-### Epic E2: Content & Balance
-- **US2.1 – Developers**: As a developer, I want to be able to adjust game balance values (such as tower damage, attack speed, and enemy health), so that we can fine-tune the gameplay experience.
-  - **Acceptance Criteria**: Given that a configuration file containing balance parameters exists, when the developer modifies values and starts the game, then the new values are applied.
+- **US1.3 – Player**: As a player, I want the game to clearly show when my village health reaches zero, so that I know I have lost the level and can decide whether to restart or return to the menu.
+  - **Acceptance Criteria**: Given that the village still has health remaining, when an enemy reaches the village, then the village health should decrease by that enemy’s damage value. If the health reaches zero, then the game should display the **defeat screen**.
 
-- **US2.2 – Game Design**: As a game designer, I want to configure enemy wave parameters (number, type, spawn timing) for each map, so that I can create varied difficulty and pacing across matches.
-  - **Acceptance Criteria**: Given that each map has its own wave definition file, when the game designer edits the number of enemies, enemy types, or spawn timing, then when the map is loaded, the new wave configuration takes effect immediately.
+### Epic E2: Content and Balance
 
+Tower defence games depend heavily on balancing. If enemies are too weak, the player has no reason to think carefully; if they are too strong, the game becomes frustrating. For this reason, we treated content and balance as a separate epic rather than leaving it as a final adjustment at the end.
 
-### Epic E3: Combat Feedback & Readability
-- **US3.1 – Artists**: As an artist, I want clear visual effects  for attacks, hits, and tower destruction, so that players can easily understand combat outcomes.
-  - **Acceptance Criteria**: Given that an enemy is within range of a tower, when the tower launches an attack, then a visible attack effect is displayed and a corresponding attack sound is played.
- 
+- **US2.1 – Developer**: As a developer, I want tower and enemy values to be stored in configurable data structures, so that we can adjust **damage**, **range**, **attack speed**, **enemy health**, **resistance** and **gold rewards** without rewriting the main game logic.
+  - **Acceptance Criteria**: Given that tower or enemy statistics are changed in the relevant configuration data, when the game is restarted and the level is loaded, then the updated values should be used during gameplay.
+
+- **US2.2 – Game Designer**: As a game designer, I want to configure enemy wave parameters for each map, so that each level can have different pacing, difficulty and enemy combinations.
+  - **Acceptance Criteria**: Given that a level has its own wave configuration, when the number of enemies, enemy types or spawn timing is edited, then the selected level should spawn enemies according to the updated wave data.
+
+### Epic E3: Combat Feedback and Readability
+
+As the game became more crowded, we realised that the player needed more than just working combat logic. They also needed to understand what was happening on screen. This epic therefore focuses on the readability of attacks, enemies, resources and combat results.
+
+- **US3.1 – Player**: As a player, I want clear visual and audio feedback for tower attacks and enemy hits, so that I can tell whether my defence is working during a wave.
+  - **Acceptance Criteria**: Given that an enemy is within range of a tower, when the tower attacks, then a visible attack effect should be displayed and a corresponding sound effect should be played.
+
+- **US3.2 – Player**: As a player, I want important information such as **health**, **gold**, tower positions and enemy movement to be readable during gameplay, so that I can make decisions without guessing what is happening.
+  - **Acceptance Criteria**: Given that the player is in a level, when they look at the game screen, then they should be able to identify the current village health, available gold, placed towers and enemy movement without opening another menu.
+
+These epics and user stories gave us a more practical way to discuss progress as a team. They also helped us define what counted as “finished” for a feature. For example, an upgrade button was not complete just because it appeared on screen; it also needed to check the player’s gold, update the tower’s statistics and give the player clear feedback that the upgrade had happened.
 
 ## 2.5 Use case diagram
 <img width="932" height="494" alt="case diagram" src="https://github.com/user-attachments/assets/0705505a-1ad3-4f4a-9b64-c0436f596fa1" />
