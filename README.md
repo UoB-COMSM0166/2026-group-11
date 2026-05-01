@@ -669,7 +669,7 @@ Looking forward, there are several improvements we would make to the current gam
 | Chuhang Li | Game development, enemy and wave logic, testing support, and gameplay balancing. |
 | Yuxuan Cheng | Visual asset design, game design support, tower and enemy artwork, and implementation support. |
 | Wen Liang | Report writing, process documentation, evaluation analysis, and coordination of written materials. |
-| Zishen Xu | Early prototype support, report writing, testing documentation, and review of requirements and design sections. |
+| Zishen Xu | Coding, early prototype support, report writing, testing documentation, and review of requirements and design sections. |
 
 
 # AI Statement
