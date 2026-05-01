@@ -542,25 +542,45 @@ Balance was another important part of black-box testing. Early versions had enem
 After each fix, we replayed the relevant parts of the game to check whether the issue had really been solved and whether new problems had been introduced. This helped us improve the basic playability of the game and made the final version more stable.
 
 
-# Process 
+# Process
 
 ## Collaboration
-In the early stage of the project, Yi Lin, Chuhang Li, and Yuxuan Cheng collected many interesting game ideas, and shared game links and video references in a shared document for the whole team. They also analysed different game genres and listed several promising directions to explore. Meanwhile, Wen Liang and Zishen Xu implemented an initial playable prototype, using simple shapes to represent towers, enemies, and the village.
-﻿
-To give every team member an opportunity to work on code, we swapped roles in the middle of the project. From that point on, Yi Lin, Chuhang Li, and Yuxuan Cheng took primary responsibility for game development and helped document the code‑related parts of the report. Wen Liang and Zishen Xu focused on weekly workshop tasks and report writing, while also providing feedback, suggesting ideas, and assisting with game code when needed.
-﻿
-This role exchange worked well for us: it allowed everyone to understand both development and documentation, though we also learned that communication became more critical when responsibilities shifted.
+
+At the beginning of the project, our team spent time exploring possible game ideas instead of deciding too quickly. Yi Lin, Chuhang Li and Yuxuan Cheng collected different game references, including playable links, videos and screenshots, and shared them in a common document. These references helped us compare several directions, such as rhythm games, multiplayer games and tower defence games. At the same time, Wen Liang and Zishen Xu worked on a simple early prototype, where basic shapes were used to represent towers, enemies and the village.
+
+This early split of work was useful because it allowed us to explore both **game design ideas** and **technical feasibility** at the same time. The reference collection helped us understand what kind of gameplay we wanted, while the prototype showed what we could realistically build with p5.js.
+
+In the middle of the project, we changed the team roles. We did this partly because we wanted every member to have some experience with the code, not only with writing or planning. After the role exchange, Yi Lin, Chuhang Li and Yuxuan Cheng took more responsibility for game development and helped write the code-related parts of the report. Wen Liang and Zishen Xu focused more on weekly workshop tasks and report writing, but they also continued to give feedback, suggest changes and help with implementation when needed.
+
+The role exchange worked well overall. It gave more people a chance to understand how the game was built, and it also made the report easier to connect with the actual code. However, it also reminded us that collaboration becomes harder when responsibilities change halfway through a project. We needed to explain recent code changes more clearly, update each other more often, and make sure that no one was working based on outdated information.
 
 ## Tools
-In the first week after forming the group, we exchanged contact details and created a WeChat group to facilitate communication. During the second week, when discussing initial game ideas, we held an online meeting via Zoom and used Feishu’s document-sharing function to collaboratively develop and refine our concepts in real time.
 
-<img width="770" height="558" alt="ideas1" src="https://github.com/user-attachments/assets/47519de9-25ee-40bd-b81f-5081f3c6dbe6" />     <img width="217" height="392" alt="number" src="https://github.com/user-attachments/assets/bd65a7f6-e36a-4560-98f4-594caaa0eb66" />
+In the first week, we exchanged contact details and created a WeChat group for daily communication. This became the quickest way for us to share small updates, ask questions and check whether someone had finished a task.
 
-Throughout the project, we maintained frequent communication, with daily updates shared in the group chat to report progress and discuss ongoing changes. In addition to the weekly face-to-face meetings after Tuesday sessions, we organised online meetings for every two weeks to ensure that all team members remained aligned and were progressing in the right direction. After each meeting, one member was responsible for documenting key discussion points and recording areas for improvement in Feishu, allowing all members to stay informed and track development decisions.
+During the early idea stage, we also held an online meeting on Zoom and used Feishu to edit shared documents together. This was especially useful when we were comparing different game ideas, because everyone could add references, comments and possible features in the same place.
 
-We implemented a Kanban-style task management system within Feishu to organise and track our development progress. Tasks were categorised into stages such as “To Do”, “In Progress”, and “Done”, which helped improve visibility and coordination within the team.
+<p align="center">
+  <img width="770" height="558" alt="ideas1" src="https://github.com/user-attachments/assets/47519de9-25ee-40bd-b81f-5081f3c6dbe6" />
+</p>
 
-This structured communication approach helped improve coordination and transparency within the team. By combining meetings and group chat and shared documents, we were able to respond quickly to issues and maintain consistent progress. However, there were occasional challenges in scheduling meetings due to conflicting timetables, which required flexibility and adjustment from all team members.
+<p align="center">
+  <strong>Figure 17: Early shared document used for collecting and comparing game ideas.</strong>
+</p>
+
+<p align="center">
+  <img width="217" height="392" alt="number" src="https://github.com/user-attachments/assets/bd65a7f6-e36a-4560-98f4-594caaa0eb66" />
+</p>
+
+<p align="center">
+  <strong>Figure 18: Group communication used to arrange discussions and share progress.</strong>
+</p>
+
+Throughout the project, we kept communicating through group chat and regular meetings. We usually discussed progress after the Tuesday sessions, and we also arranged online meetings when larger decisions were needed. After meetings, one member would record the key points in Feishu, including what had been decided, what still needed to be improved, and who was responsible for the next task.
+
+We also used a simple Kanban-style board in Feishu to manage progress. Tasks were placed under stages such as **To Do**, **In Progress** and **Done**. This helped us see which parts of the project were moving forward and which parts needed more attention.
+
+Overall, these tools made the project easier to coordinate. WeChat was useful for quick messages, Zoom helped when we needed longer discussions, and Feishu worked well for shared writing and task tracking. The main difficulty was scheduling. Since team members had different timetables, it was sometimes hard to find a meeting time that suited everyone. In those cases, we relied more on written updates and flexible task sharing to keep the project moving.
 
 
 # Sustainability, ethics and accessibility
