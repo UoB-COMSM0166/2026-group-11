@@ -135,7 +135,7 @@ Other groups also affected the requirements. Designers cared about balance and l
 </p>
 
 <p align="center">
-  <strong>Figure 2: Stakeholder diagram for Sunnyvale Gate.</strong>
+  <strong>Figure 4: Stakeholder diagram for Sunnyvale Gate.</strong>
 </p>
 
 ## 2.4 Epics, User Stories and Acceptance Criteria
@@ -176,7 +176,7 @@ The use case diagram summarises the player’s main actions: start the game, sel
 </p>
 
 <p align="center">
-  <strong>Figure 3: Use case diagram showing the main player interactions in Sunnyvale Gate.</strong>
+  <strong>Figure 5: Use case diagram showing the main player interactions in Sunnyvale Gate.</strong>
 </p>
 
 ## 2.6 Reflection
