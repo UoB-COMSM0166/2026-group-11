@@ -313,7 +313,9 @@ classDiagram
     CannonBomb --> ExplosionEffect : triggers
     WaveSystem --> Enemy : spawns
 ```
-
+<p align="center">
+  <strong>Figure 7: Class diagram showing the main classes, modules and relationships in Sunnyvale Gate.</strong>
+</p>
 
 ## 3.3 Behavioural Diagram
 
