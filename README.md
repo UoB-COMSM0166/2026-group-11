@@ -86,9 +86,9 @@ Our main twist is that the game uses a cosy farming-game atmosphere while adding
 
 ## 2.1 Early stages design
 
-At the start, we compared several ideas in online meetings. The strongest options were a rhythm game and a tower defence game. We chose tower defence: enemies follow a path, the player places towers, and each level has a clear result.
+At the start of the project, we compared several game ideas in online meetings. The two ideas we returned to most were a rhythm game and a tower defence game. We chose tower defence because it gave us a clear structure: enemies follow a path, the player places towers, and each level ends with a clear win or loss.
 
-Our first plan was larger. Around week three, we wanted a multiplayer tower defence game with towers and attacking units. We explored this with a PowerPoint prototype and paper sketches.
+Our first plan was bigger than the final game. Around week three, we wanted to make a multiplayer tower defence game, where players could build defensive towers and send attacking units. We explored this idea with a PowerPoint prototype and some paper sketches.
 
 https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
 
@@ -96,21 +96,23 @@ https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
   <strong>Figure 1: Early prototype video used to discuss the original multiplayer tower defence idea.</strong>
 </p>
 
-The prototype made the risk clearer. Multiplayer needed **online synchronisation**, PvP balancing and extra testing before the basic loop worked. We therefore reduced the scope and built a single-player PvE game inspired by *Kingdom Rush*.
+The prototype made the risk much easier to see. Multiplayer would have required **online synchronisation**, PvP balancing and more testing before the basic tower defence loop was even stable. Since our group had limited game development experience, we reduced the scope and moved to a single-player PvE game inspired by *Kingdom Rush*.
 
 ## 2.2 Requirement elicitation and refinement
 
-After that, we defined one-match play: choose a level, place towers on **valid positions**, survive **enemy waves**, earn **gold**, upgrade towers and protect the village.
+After reducing the scope, we focused on what one match should contain. The player needed to choose a level, place towers on **valid positions**, survive **enemy waves**, earn **gold**, upgrade towers and protect the village.
 
-We used *Kingdom Rush* as a reference, not something to copy. It helped us check expected features: **visible enemy paths**, fixed building points, upgrades, resources and clear win-or-lose feedback. First came map loading, enemy movement, tower placement, attacks, health, gold and level completion. Later came polish, sound, tutorial guidance, special towers and the boss.
+We used *Kingdom Rush* as a reference, but not as something to copy directly. It helped us check whether our game included the features players would expect from a tower defence game: **visible enemy paths**, fixed building points, upgrades, resources and clear win-or-lose feedback. We built the basic parts first, such as map loading, enemy movement, tower placement, tower attacks, health, gold and level completion. Features such as sound effects, tutorial guidance, special tower behaviour and the boss were added later.
 
-Testing changed our ideas. Different tower images were not enough. Each tower needed a job: archery for fast single-target damage, magic for physical defence, cannon for groups and ice for slowing enemies. Enemies also needed different **health**, **speed**, **resistance** and **gold rewards**.
+Testing also changed our thinking. At first, different tower images seemed enough to show variety. In practice, this did not give the player many real choices. Each tower needed a clear role: archery for fast single-target damage, magic for enemies with physical defence, cannon for grouped enemies and ice for slowing enemies. We used the same idea for enemies by giving them different **health**, **speed**, **resistance** and **gold reward** values.
 
 ## 2.3 Stakeholders
 
-Following the requirements lecture, we identified stakeholders first. The main stakeholders were the **players**. They needed to understand paths, tower positions, **health**, **gold** and level results.
+Following the requirements lecture, we identified stakeholders before writing user stories. The most important stakeholders were the **players**. They needed to understand the path, tower positions, **health**, **gold** and level results without guessing what was happening.
 
-The **development team** also mattered because the scope had to fit our skills and time. This was why we removed multiplayer and used adjustable map, tower and wave data. Designers cared about balance, artists about readability, and testers needed clear checks.
+The **development team** was another important stakeholder. The project had to fit our skills and the time available, which is why we removed multiplayer and used adjustable map, tower and wave data instead.
+
+Other groups also affected the requirements. Designers cared about balance and level pacing. Artists cared about seasonal style and readability. Testers needed clear checks, such as whether towers attacked enemies in range or whether gold was deducted after an upgrade.
 
 <p align="center">
   <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
@@ -124,13 +126,13 @@ The **development team** also mattered because the scope had to fit our skills a
 
 **Epic E1: Core PvE Tower Defence Loop**
 
-- **US1.1 – Player**: As a player, I want to defend my village from waves, so that the challenge grows.
+- **US1.1 – Player**: As a player, I want to defend my village from enemy waves, so that the level becomes more challenging over time.
   - **Acceptance Criteria**: Given that a level has loaded and enemies have spawned, when an enemy enters tower range, then the tower attacks a valid target.
 
 - **US1.2 – Player**: As a player, I want to upgrade towers, so that I can handle stronger enemies.
   - **Acceptance Criteria**: Given that the player has enough **gold** and selects a tower, when the upgrade is confirmed, then gold is deducted and the tower statistics change.
 
-- **US1.3 – Player**: As a player, I want defeat feedback, so that I know when I have lost.
+- **US1.3 – Player**: As a player, I want clear defeat feedback, so that I know when the village has been lost.
   - **Acceptance Criteria**: Given that enemies are moving along the path, when an enemy reaches the village, then **health** decreases. If health reaches zero, then the defeat screen appears.
 
 **Epic E2: Content and Balance**
@@ -138,7 +140,7 @@ The **development team** also mattered because the scope had to fit our skills a
 - **US2.1 – Developer**: As a developer, I want adjustable values, so that damage, range, speed, resistance and rewards can be balanced.
   - **Acceptance Criteria**: Given that tower or enemy data has been changed, when the level is loaded, then the game uses the new values.
 
-- **US2.2 – Game Designer**: As a game designer, I want configurable waves, so that maps have different pacing.
+- **US2.2 – Game Designer**: As a game designer, I want configurable waves, so that maps can have different pacing and enemy combinations.
   - **Acceptance Criteria**: Given that wave data has been edited, when a level starts, then enemies spawn according to that data.
 
 **Epic E3: Combat Feedback and Readability**
@@ -146,12 +148,12 @@ The **development team** also mattered because the scope had to fit our skills a
 - **US3.1 – Player**: As a player, I want attack effects and sounds, so that I can see whether towers are working.
   - **Acceptance Criteria**: Given that an enemy is in range, when a tower attacks, then the game shows an attack effect and plays a sound.
 
-- **US3.2 – Player**: As a player, I want **health**, **gold**, towers and enemies to be readable, so that I can decide quickly.
-  - **Acceptance Criteria**: Given that the player is in a level, when they look at the game screen, then the key information is visible without opening another menu.
+- **US3.2 – Player**: As a player, I want **health**, **gold**, towers and enemies to be readable, so that I can make decisions quickly during a wave.
+  - **Acceptance Criteria**: Given that the player is in a level, when they look at the game screen, then health, gold, towers and enemy movement are visible without opening another menu.
 
 ## 2.5 Use Case Diagram
 
-The use case diagram summarises the player’s main actions: start, select a level, place and upgrade towers, pause, and reach victory or defeat. It also reminded us to check **valid placement**, enough **gold** and village **health**.
+The use case diagram summarises the player’s main actions: start the game, select a level, place and upgrade towers, pause, and reach victory or defeat. It also reminded us that player actions often need system checks, such as **valid placement**, enough **gold** and village **health**.
 
 <p align="center">
   <img width="932" height="494" alt="Use case diagram" src="https://github.com/user-attachments/assets/0705505a-1ad3-4f4a-9b64-c0436f596fa1" />
@@ -163,9 +165,11 @@ The use case diagram summarises the player’s main actions: start, select a lev
 
 ## 2.6 Reflection
 
-Requirements work made the project more realistic. It moved us from a broad idea to a game we could finish.
+Requirements work made the project more realistic. It helped us move from a broad idea to a game we could actually finish.
 
-The user stories made us think less like developers and more like players. A tower was not finished just because it appeared on the map; it needed valid placement, cost, attacks and feedback. We also learned that requirements change once the game becomes playable.
+The user stories made us think less like developers and more like players. A tower was not finished just because it appeared on the map. It needed valid placement, cost, attacks and feedback. This made the requirements useful during testing, not just during planning.
+
+We also learned that requirements change once the game becomes playable. Tower balance, enemy difficulty and interface clarity all changed during development, but having the requirements written down made those changes easier to discuss.
 
 # Design
 
