@@ -104,7 +104,23 @@ After reducing the scope, we focused on what one match should contain. The playe
 
 We used *Kingdom Rush* as a reference, but not as something to copy directly. It helped us check whether our game included the features players would expect from a tower defence game: **visible enemy paths**, fixed building points, upgrades, resources and clear win-or-lose feedback. We built the basic parts first, such as map loading, enemy movement, tower placement, tower attacks, health, gold and level completion. Features such as sound effects, tutorial guidance, special tower behaviour and the boss were added later.
 
+<p align="center">
+  <img src="docs/assets/requirements_refinement.gif" alt="Requirement refinement process" width="760" />
+</p>
+
+<p align="center">
+  <strong>Figure 2: Requirement refinement from the early multiplayer idea to the single-player PvE loop.</strong>
+</p>
+
 Testing also changed our thinking. At first, different tower images seemed enough to show variety. In practice, this did not give the player many real choices. Each tower needed a clear role: archery for fast single-target damage, magic for enemies with physical defence, cannon for grouped enemies and ice for slowing enemies. We used the same idea for enemies by giving them different **health**, **speed**, **resistance** and **gold reward** values.
+
+<p align="center">
+  <img src="docs/assets/requirements_roles_balance.gif" alt="Tower and enemy requirement refinement" width="760" />
+</p>
+
+<p align="center">
+  <strong>Figure 3: Refining tower and enemy requirements into gameplay roles.</strong>
+</p>
 
 ## 2.3 Stakeholders
 
