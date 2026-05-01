@@ -38,9 +38,11 @@ VIDEO. Include a demo video of your game here
 
 # Introduction
 
-When we first brainstormed game ideas, we all coincidentally thought of two very famous and classic games: Stardew Valley and Kingdom Rush. After several discussions, we finally decided to combine the warm, pastoral art style of Stardew Valley with the strategic tower defense gameplay of Kingdom Rush. We want to mix these two feels together to bring players a unique experience.
+Sunnyvale Gate is a browser-based tower defence game developed with p5.js. The idea came from two games that several members of our group liked: Stardew Valley and Kingdom Rush. We wanted to borrow the warm seasonal style of Stardew Valley, but combine it with the clearer goals and strategy of a tower defence game.
 
-Players will build different types of defense towers to protect their village from attacks by various slime enemies across four maps, each representing a distinct season. By defeating enemies and earning gold, players can upgrade their basic defense towers; selecting the right towers to upgrade will be key to turning the tide of battle. Beyond what *Kingdom Rush* offers, we’ve designed a variety of unique towers. For example, the Frost Tower slows down enemies, and the Cannon Tower focuses attacks on the densest clusters of enemies. Additionally, the final boss in the last level has several unique skills.
+In the game, the player protects a village from waves of slime enemies across four seasonal maps: spring, summer, autumn and winter. The player earns gold by defeating enemies, then uses it to build or upgrade towers. Different enemies have different health, speed and resistance values, so the player needs to think about which tower to build and when to upgrade it.
+
+Our main twist is that the game uses a cosy farming-game atmosphere but adds more specialised tower behaviours. For example, the Frost Tower is designed to slow enemies that have not already been slowed, while the Cannon Tower attacks areas where enemies are most concentrated. The final level also includes a boss with special behaviours, including splitting, reviving and attacking the player’s most valuable tower. These features became the main technical challenges during implementation.
 
 ## Defensive Towers
 | Tower Type | Image | Description |
