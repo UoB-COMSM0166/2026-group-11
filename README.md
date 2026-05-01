@@ -339,11 +339,13 @@ Overall, the behavioural diagram helped us check whether the design supported a 
 
 ## 3.4 Design Reflection
 
-The design was simple, but it matched the size of our project. Using p5.js meant that a repeated frame update was natural, and the `draw()` loop gave us a straightforward way to update enemies, towers, effects and game state.
+Overall, the design was simple but practical. Using p5.js meant that a repeated frame update was natural, so the `draw()` loop became a clear place to update enemies, towers, effects and game state. This matched the type of game we were building.
 
-The main strength of the design was that the important gameplay values were stored as data. This made it easier to balance towers, enemies and waves after testing. It also supported the requirements from Section 2, where we needed different tower roles, enemy types and difficulty pacing.
+The strongest part of the design was the data-driven structure. Tower statistics, enemy values, map routes and wave configurations were stored separately from most of the gameplay logic. This made balancing easier after testing, because we could adjust values such as **damage**, **range**, **health**, **speed** and **spawn timing** without rewriting the whole system.
 
-The main weakness was that `sketch.js` still handled too many responsibilities by the end of the project, especially scene control and UI interaction. If we continued development, we would split these parts into separate modules. That would make the central game loop easier to read and reduce the risk of small UI changes affecting unrelated gameplay logic.
+The modular file structure also helped the team work more clearly. For example, tower behaviour, enemy behaviour, wave control, sound and UI support were placed in different files. This made the project easier to understand than putting everything into one script.
+
+The main weakness was that `sketch.js` still became too large by the end of the project. It handled scene switching, player input, UI actions and some gameplay control at the same time. If we continued development, we would split scene management and UI interaction into separate modules. This would make the central game loop easier to read and reduce the risk of small UI changes affecting unrelated gameplay logic.
 
 # Implementation
 
