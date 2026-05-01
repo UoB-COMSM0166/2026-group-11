@@ -81,7 +81,7 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 | 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
 | 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
 | 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
-| 5 | Zishen Xu | chuichisum@163.com | Coder & Report |
+| 5 | Zishen Xu | eh25470@bristol.ac.uk | Coder & Report |
 
 # Introduction
 
