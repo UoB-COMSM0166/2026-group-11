@@ -108,6 +108,8 @@ We used *Kingdom Rush* as a reference because most of us understood its tower de
 
 We also had to be honest about what we could not finish. The early multiplayer version sounded exciting, but it would have needed **online synchronisation**, **player-versus-player balancing**, and more complicated interaction rules. These were not small additions; they would have changed the whole project. We therefore treated online multiplayer and PvP unit deployment as out of scope, rather than trying to keep them and risk finishing nothing properly.
 
+此处添加素材
+
 After that, we split the requirements into features we needed first and features we could add later. The first group included **map loading**, **enemy movement**, **tower placement**, **tower attacks**, player health, gold rewards, and level completion. Once this worked, we could spend time on more interesting content, such as special tower behaviours, seasonal maps, sound effects, tutorial guidance, and the final boss. This order helped us avoid polishing the game before it was actually playable.
 
 Some requirements only became clear after we had tested rough versions of the game. At first, having several tower images seemed enough to show variety. In practice, that was not very meaningful for the player. We changed the requirement so that each tower had a role: **archery towers** for fast single-target physical damage, **magic towers** for enemies with physical defence, **cannon towers** for grouped enemies, and **ice towers** for slowing enemies. This made tower choice part of the strategy rather than just a visual difference.
