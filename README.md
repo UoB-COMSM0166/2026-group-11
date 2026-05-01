@@ -41,6 +41,7 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
    - [Challenge 2: Boss design](#challenge-2-boss-design)
      - [Boss split and revive](#boss-split-and-revive)
      - [Boss targeting the most valuable tower](#boss-targeting-the-most-valuable-tower)
+   - [Challenge 3: Data-driven balancing and wave configuration](#challenge-3-data-driven-balancing-and-wave-configuration)
 
 6. [Evaluation](#evaluation)
    - [Qualitative evaluation](#qualitative-evaluation)
@@ -57,16 +58,18 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
    - [Collaboration](#collaboration)
    - [Tools](#tools)
 
-8. [Sustainability, ethics and accessibility](#sustainability-ethics-and-accessibility)
+8. [Sustainability, Ethics and Accessibility](#sustainability-ethics-and-accessibility)
    - [Environmental](#environmental)
    - [Social](#social)
    - [Individual](#individual)
 
-9. [Conclusion](#conclusion)
+9. [Report and Code Quality](#report-and-code-quality)
 
-10. [Contribution statement](#contribution-statement)
+10. [Conclusion](#conclusion)
 
-11. [AI statement](#ai-statement)
+11. [Contribution Statement](#contribution-statement)
+
+12. [AI Statement](#ai-statement)
 
 # Team
 
@@ -78,7 +81,7 @@ Love the art style of Stardew Valley and enjoy playing Kingdom Rush? Then this g
 | 2 | Chuhang Li | zgndylch@163.com | Developer & Game Designer |
 | 3 | Yuxuan Cheng | chengyx0921@outlook.com | Developer & Graphic Artist |
 | 4 | Wen Liang | fd21102@bristol.ac.uk | Report & Process Coordinator |
-| 5 | Zishen Xu | eh25470@bristol.ac.uk | Coder & Report |
+| 5 | Zishen Xu | chuichisum@163.com | Coder & Report |
 
 # Introduction
 
@@ -397,7 +400,7 @@ The game was implemented as a browser-based p5.js project. The main flow is cont
 
 The game is partly data-driven. Tower costs and upgrades are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Enemy values come from `ENEMY_TYPES`, while map routes and build slots are loaded from `maps.js`. Wave content is defined in `LEVEL_WAVE_CONFIGS`. This made balancing easier, because we could adjust **damage**, **range**, **health**, **speed** and **spawn timing** without rewriting the whole gameplay loop.
 
-The final version supports the complete tower defence flow: the player can select a level, place towers on valid slots, upgrade them, fight waves, earn gold, lose health, and reach victory or defeat. The two most difficult areas were the special tower targeting rules and the boss design.
+The final version supports the complete tower defence flow: the player can select a level, place towers on valid slots, upgrade them, fight waves, earn gold, lose health, and reach victory or defeat. The three most important implementation challenges were special tower targeting, boss behaviour, and data-driven balancing.
 
 ## Challenge 1: Different defence towers
 
@@ -466,6 +469,14 @@ This feature connected boss behaviour with the economy system. It also changed p
 <p align="center">
   <strong>Figure 12: Boss logic that selects the highest-value tower in range as its target.</strong>
 </p>
+
+## Challenge 3: Data-driven balancing and wave configuration
+
+The third challenge was keeping the game adjustable as more enemies, towers and levels were added. Instead of putting all values directly inside the main game loop, we stored most balance values in configuration objects. Tower prices and upgrade statistics are handled through `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`, while enemy health, speed, resistance and rewards are stored in `ENEMY_TYPES`. Wave patterns are defined separately in `LEVEL_WAVE_CONFIGS`.
+
+This structure made repeated balancing much easier. If one wave felt too difficult, we could adjust enemy health, tower damage, gold rewards or spawn timing without changing the logic of `draw()`, `Tower.update()` or `spawnCurrentWave()`. It also made the code easier for different team members to understand, because the gameplay numbers were separated from the behaviour that uses them.
+
+This was especially useful near the end of development, when playtesting showed that some enemies were too strong and some waves created sudden difficulty spikes. By changing the configuration data, we could smooth the difficulty curve while keeping the same core systems.
 
 Overall, the implementation met the main requirements and produced a complete playable tower defence game. The special tower targeting and boss mechanics were the main technical challenges because they required more than simple movement or damage values. They also made the final game feel more strategic and distinctive.
 
@@ -631,7 +642,7 @@ We also used a simple Kanban-style task system in Feishu. Tasks were placed unde
 The main difficulty was scheduling. Since team members had different timetables, it was sometimes hard to find a time when everyone could attend a meeting. When that happened, we relied more on written updates, screenshots and short summaries after discussion. This was not as efficient as meeting together, but it helped us keep the project moving.
 
 Overall, our process became more organised over time. At first, we mostly shared ideas and tested possibilities. Later, the work became more focused: implementing features, balancing the game, testing, and writing the report. The combination of WeChat, Zoom and Feishu helped us stay connected, while the role exchange gave more members a chance to understand both the game and the documentation.
-# Sustainability, ethics and accessibility
+# Sustainability, Ethics and Accessibility
 
 ## Environmental
 The direct impact of this game on the environment is relatively low because it is a lightweight digital application that does not require specialized hardware. However, like all software systems, it still consumes computing resources during execution, including CPU usage, memory, and power. If a large number of participants frequently use it, this may lead to an increase in energy consumption and related carbon emissions. In addition, there is a potential rebound effect that increasing participation in games may lead to longer screen time and higher overall device usage. To mitigate these impacts, games can be optimized for performance efficiency, such as reducing unnecessary computations and limiting resource intensive processes, which is consistent with sustainable software design principles.
@@ -639,8 +650,18 @@ The direct impact of this game on the environment is relatively low because it i
 ## Social
 From a societal perspective, games have the potential to encourage interaction and participation among players, especially when played in group environments. However, the relatively high difficulty of the game may pose obstacles for inexperienced users, reducing inclusivity and overall engagement. Players who struggle to understand the mechanisms or cope with challenges may feel frustrated or discouraged, which can have a negative impact on their willingness to continue playing or interacting with others. Therefore, games may not equally support a variety of players, which can affect accessibility and user satisfaction. To enhance social sustainability, it is important to balance challenges and usability by providing clearer explanations, more supportive feedback, and potentially adjustable difficulty levels to ensure a more inclusive experience.
 
-## Individual 
+## Individual
 Games have a significant impact on individuals, especially in terms of user experience, learning, and happiness. Although it can provide entertainment, the relatively high difficulty may lead to increased frustration and decreased satisfaction for some players. Users who strive for progress may feel discouraged, which can have a negative impact on motivation and overall enjoyment. This is consistent with the evaluation results, where as the difficulty increases, the workload increases, and the usability score decreases. In addition, prolonged exposure to a challenging and potentially frustrating system may lead to mental fatigue. To enhance individual sustainability, it is important to balance challenge and usability by providing clearer feedback, smoother learning curves, and potentially adjustable difficulty levels, ensuring that the game remains attractive without negatively impacting user interest.
+
+# Report and Code Quality
+
+We tried to make this repository understandable for someone outside the team. In the report, we used diagrams, tables, screenshots and short animations to explain the project visually, rather than relying only on text. The aim was to make the game idea, requirements, design, implementation and testing process clear to an interested reader who had not followed our weekly development.
+
+We also kept the code organised by responsibility where possible. For example, `sketch.js` controls the main p5.js flow, `tower.js` handles tower behaviour, `enemy.js` handles enemies and boss logic, `game_systems.js` manages waves and level state, `maps.js` stores map routes and build slots, and `towereffect.js` contains projectiles and combat effects.
+
+Important gameplay values are stored in configuration objects such as `TOWER_COST`, `TOWER_LEVEL_STATS`, `ENEMY_TYPES` and `LEVEL_WAVE_CONFIGS`. This makes the game easier to rebalance and extend without rewriting the main gameplay loop. We also added comments around more complex sections, including tower targeting, boss fragment behaviour, wave spawning and sound management.
+
+One limitation is that `sketch.js` still became quite large by the end of the project. If another team continued the project, the next improvement would be to split more UI and scene-control code into separate modules. Even so, the current repository structure should make the main systems clear enough for future development.
 
 # Conclusion
 Developing our tower defence game challenged and improved our understanding of the full software development process. At the beginning of the project, we collected a range of possible game ideas and discussed their strengths, weaknesses, and feasibility. We then narrowed these ideas down into one clear tower defence concept, which allowed us to focus on a game that was both achievable within the deadline and enjoyable for players.
@@ -654,27 +675,41 @@ We also learnt the value of both black-box and white-box testing. Black-box test
 Looking forward, there are several improvements we would make to the current game. We would improve the save and continue system, polish the user interface, add clearer gameplay feedback, and continue balancing the difficulty of each level. If we had the opportunity to develop a sequel, we would add more tower types, enemies with special abilities, and more complex maps with branching paths or environmental effects.  Finally, considering sustainability encouraged us to think about performance, maintainability, accessibility, and how the project could continue to develop beyond the current version. Overall, this project gave us valuable experience in teamwork, planning, programming, testing, and reflecting on a complete software engineering project.
 
 
-# Contribution statement
+# Contribution Statement
 
 | Contributor | Contribution |
 |------------|-------------|
-| Yi Lin | 20% |
-| Chuhang Li | 20% |
-| Yuxuan Cheng | 20% |
-| Wen Liang | 20% |
-| Zishen Xu | 20% |
+| Yi Lin | Game development, tower logic, implementation writing, and balance refinement. |
+| Chuhang Li | Game development, enemy and wave logic, testing support, and gameplay balancing. |
+| Yuxuan Cheng | Visual asset design, game design support, tower and enemy artwork, and implementation support. |
+| Wen Liang | Report writing, process documentation, evaluation analysis, and coordination of written materials. |
+| Zishen Xu | Early prototype support, report writing, testing documentation, and review of requirements and design sections. |
 
 
+# AI Statement
 
-# Ai statement
+This course allows the use of AI, so we would like to explain our use of AI honestly.
 
-During the development process of this project, artificial intelligence tools were used for limited and supportive roles. The background image we use is generated using artificial intelligence tools to enhance the overall beauty of the game and save time. In addition, when addressing technical challenges in code, artificial intelligence is occasionally consulted as a learning aid tool. We did not directly copy the generated code, but used artificial intelligence to understand methods and solutions, and then implemented our own versions based on this understanding. All core design decisions, implementation, and evaluation are independently conducted by the team.
+In this project, we used AI tools as learning and support tools, not as a replacement for our own design, coding or testing work. The main AI tool we used was ChatGPT, and we also used AI drawing tools to support part of the visual asset creation process.
 
+For visual design, AI drawing tools were used to help us explore possible background images, visual styles and reference ideas. However, many in-game assets were still drawn or edited by our team members using a tablet, including slimes, defensive towers and some attack effects. AI helped us save time during early visual exploration, but the final selection, adjustment and integration of assets were completed by the team.
 
-### Additional Marks
-You can delete this section in your own repo, it's just here for information. in addition to the marks above, we will be marking you on the following two points:
-- **Quality** of report writing, presentation, use of figures and visual material (5% of report grade) 
-  - Please write in a clear concise manner suitable for an interested layperson. Write as if this repo was publicly available.
-- **Documentation** of code (5% of report grade)
-  - Organise your code so that it could easily be picked up by another team in the future and developed further.
-  - Is your repo clearly organised? Is code well commented throughout?
+For coding, we used AI mainly when we met problems that were beyond our current programming knowledge. We used it to understand how certain functions, structures or algorithms could work, rather than asking it to produce a complete solution for us. For example, when implementing more advanced tower behaviour, we used AI to learn about filtering enemies into groups, comparing candidates, using distance calculations, and selecting the best target based on a scoring rule.
+
+One example is the Ice Tower logic. In our code, the Ice Tower uses `findBestIceTarget()` to separate enemies into **unslowed** and **slowed** groups, then prioritises enemies that have not yet been slowed. AI helped us think through this kind of logic structure, especially how to avoid repeatedly attacking the same already-slowed enemy. The final implementation was adapted by us to fit our own `Enemy` and `Tower` classes, including checks such as `isEnemySlowed()` and status values like `slowTimer`.
+
+Another example is the Cannon Tower targeting system. The function `findBestSplashTarget()` does not simply select the nearest enemy. Instead, it checks possible target enemies and counts how many other enemies would be inside the splash radius. This makes the Cannon Tower choose the densest group of enemies. AI helped us understand this candidate-scoring approach, but we adjusted the logic ourselves to work with our own `enemies` array, tower range, `splashRadius`, and flying-enemy restrictions.
+
+We also used AI as a learning aid for boss behaviour. The King Slime boss uses more complicated state-based logic than normal enemies. For example, when the boss reaches 0 HP, `takeDamage()` can trigger `startBossFragmenting()` instead of immediately killing the boss. This changes `bossPhase` to `"fragmenting"`, saves the boss death position, creates boss fragments with `initBossFragments()`, and later allows the boss to reform. AI helped us understand how to structure this kind of state-based behaviour, but the final boss mechanics, timing, fragment handling and integration with the path system were written and tested by the team.
+
+AI was also useful when we worked on boss tower targeting. In `findHighestValueTowerInRange()`, the boss searches through the `towers` array and chooses the tower with the highest `totalSpent` value within range. If two towers have the same value, distance is used as a tie-breaker. We used AI to discuss how to make this targeting rule clearer and more maintainable, but the idea was adapted to our own economy system, where tower value depends on build cost and upgrade cost.
+
+In addition to learning new logic patterns, we used AI to improve the structure of some functions. As the codebase grew, we needed the project to stay readable for multiple team members. AI was sometimes used to suggest cleaner function organisation, clearer variable naming, and ways to separate responsibilities. For example, we improved the structure around data-driven configuration such as `TOWER_COST`, `TOWER_UPGRADE_COSTS`, `TOWER_LEVEL_STATS`, `ENEMY_TYPES`, and `LEVEL_WAVE_CONFIGS`. This made it easier to adjust tower damage, enemy health, wave timing and gold rewards without rewriting the whole gameplay loop.
+
+We also used AI to better understand some JavaScript and p5.js concepts. These included array traversal, filtering candidate objects, distance calculations such as `dist()` and `Math.hypot()`, frame-based timing using `frameCount`, state flags such as `dead`, `reachedEnd` and `bossPhase`, and object-based configuration data.
+
+For the report, AI was used mainly to help us think about structure and clarity. We asked questions such as: **what should this section show to the teacher and players?**, **how can we explain this design decision more clearly?**, and **which implementation details are worth highlighting?** AI helped us organise the report outline and improve the flow between requirements, design, implementation, testing and process. However, the project details, screenshots, reflections and final content choices were based on our own work and team discussion.
+
+Finally, we used AI to check English grammar, vocabulary and sentence expression. Since the report is written in English, we sometimes asked for advice on clearer wording, more accurate academic expressions, and better sentence structures. The purpose was to communicate our own work more precisely, not to replace our understanding.
+
+Overall, AI supported our learning, visual exploration, code organisation and report writing. It helped us understand unfamiliar concepts and express our work more clearly. However, all core gameplay ideas, design decisions, implementation choices, testing, evaluation and final project content were completed by the team.
