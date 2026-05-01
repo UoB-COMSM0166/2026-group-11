@@ -100,6 +100,22 @@ During later discussions, we realised that the multiplayer version would be diff
 
 Over the following weeks, we used stakeholders, epics, user stories and acceptance criteria to make the game requirements clearer. This helped us move from a general idea to a set of features that could actually be implemented, such as level selection, tower placement, enemy waves, gold rewards and tower upgrades. We also created a use case diagram to describe the overall player workflow and to guide the later design and implementation work.
 
+## 2.2 Requirement elicitation and refinement
+
+After we dropped the multiplayer idea, we had to make the tower defence concept more concrete. We started from a simple question: what should the player actually be able to do in one match? The answer became our basic loop: the player chooses a level, places towers on valid positions, survives enemy waves, earns **gold** from defeated enemies, upgrades towers, and wins or loses depending on whether the village survives. This was not a very complicated loop, but it gave us something clear to build around.
+
+We used *Kingdom Rush* as a reference because most of us understood its tower defence structure. We were not trying to reproduce the whole game. Instead, we used it to check whether our own design included the things players would expect: **visible enemy paths**, **fixed building points**, different tower roles, enemy waves, resource management, and clear feedback when enemies reached the village. These features became our basic functional requirements because without them the game would be difficult to understand or control.
+
+We also had to be honest about what we could not finish. The early multiplayer version sounded exciting, but it would have needed **online synchronisation**, **player-versus-player balancing**, and more complicated interaction rules. These were not small additions; they would have changed the whole project. We therefore treated online multiplayer and PvP unit deployment as out of scope, rather than trying to keep them and risk finishing nothing properly.
+
+After that, we split the requirements into features we needed first and features we could add later. The first group included **map loading**, **enemy movement**, **tower placement**, **tower attacks**, player health, gold rewards, and level completion. Once this worked, we could spend time on more interesting content, such as special tower behaviours, seasonal maps, sound effects, tutorial guidance, and the final boss. This order helped us avoid polishing the game before it was actually playable.
+
+Some requirements only became clear after we had tested rough versions of the game. At first, having several tower images seemed enough to show variety. In practice, that was not very meaningful for the player. We changed the requirement so that each tower had a role: **archery towers** for fast single-target physical damage, **magic towers** for enemies with physical defence, **cannon towers** for grouped enemies, and **ice towers** for slowing enemies. This made tower choice part of the strategy rather than just a visual difference.
+
+Enemy design changed in the same way. We did not want enemies to differ only by sprite, so we gave them different **health**, **speed**, **resistance**, and **gold reward** values. Fast enemies tested whether the player had placed towers well. Resistant enemies forced the player to think about tower type. High-health enemies checked whether the player had upgraded enough. This made the waves more useful for balancing the game, not just for showing more enemy art.
+
+Overall, this process helped us turn a broad idea into a set of requirements that the team could actually work with. It also changed how we judged whether a feature was finished. For example, tower placement was not complete just because a tower appeared on the map. It also had to check whether the position was valid, deduct **gold**, attack enemies correctly, and fit into the player’s strategy. This clearer definition of “done” later supported our stakeholders, epics, user stories, acceptance criteria, and use case diagram.
+
 ## 2.3 Stakeholders
 
 <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/4c87d074-d6a2-406d-9b49-bfbc2a5acc7a" />
