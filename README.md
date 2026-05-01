@@ -238,11 +238,11 @@ We also learned that requirements change once the game becomes playable. Tower b
 
 ## 3.1 System Architecture
 
-**Sunnyvale Gate** was designed as a browser-based p5.js game that runs from the `docs` folder on GitHub Pages. We kept the overall structure simple because the project needed to be playable in the browser, and because our group was still learning JavaScript and p5.js while building the game.
+**Sunnyvale Gate** is a browser-based p5.js game running from the `docs` folder on GitHub Pages. We kept the structure simple because the game needed to run smoothly in the browser, and our team was still learning JavaScript and p5.js during development.
 
-The main file is `sketch.js`, which acts as the central controller. It uses the p5.js lifecycle functions `preload()`, `setup()`, `draw()` and `mousePressed()` to load assets, create the canvas, update the game every frame and handle player input. A global `gameState` variable controls the main scene flow, including the home screen, comic introduction, level selection and gameplay. This gave the game a clear player journey without needing a more complicated screen management system.
+The main controller is `sketch.js`. It uses p5.js functions such as `preload()`, `setup()`, `draw()` and `mousePressed()` to load assets, create the canvas, update the game every frame and handle player input. A global `gameState` variable controls the main scenes, including the home screen, comic introduction, level selection and gameplay. This gave the game a clear flow without requiring a complex scene-management system.
 
-Several design choices came directly from the requirements in Section 2. For example, the requirements for **enemy waves**, **tower upgrades**, **gold**, and **valid tower placement** meant that the game needed data that could be changed easily. For this reason, map data is stored in `maps.js`, enemy values are stored in `ENEMY_TYPES`, and tower values are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Wave patterns are defined in `LEVEL_WAVE_CONFIGS`. This data-driven approach made balancing easier, since we could adjust health, damage, range or wave timing without rewriting the whole battle system.
+Several design choices came from the requirements in Section 2. Since the game needed **enemy waves**, **tower upgrades**, **gold**, and **valid tower placement**, we used data-driven configuration where possible. Map routes and build slots are stored in `maps.js`, enemy values are stored in `ENEMY_TYPES`, tower values are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`, and wave patterns are stored in `LEVEL_WAVE_CONFIGS`. This made balancing easier because we could adjust health, damage, range and spawn timing without rewriting the main loop.
 
 <p align="center">
   <img src="docs/assets/system_architecture_overview.png" alt="System architecture overview" width="900" />
@@ -252,23 +252,19 @@ Several design choices came directly from the requirements in Section 2. For exa
   <strong>Figure 6: System architecture overview of Sunnyvale Gate.</strong>
 </p>
 
-During a level, active objects are stored in arrays such as `towers`, `enemies` and `lasers`. Each frame, the game updates enemy movement, tower targeting, projectiles, visual effects, player gold, village health and win-or-lose checks. This fits p5.js well because the `draw()` loop already works as a repeated update cycle.
+During gameplay, active objects are stored in arrays such as `towers`, `enemies` and `lasers`. Each frame, the game updates enemy movement, tower targeting, projectiles, effects, gold, village health and win-or-loss checks. The repeated `draw()` loop fits this kind of tower defence game well.
 
-We also separated key responsibilities across different files. `preload_assets.js` handles asset loading, `maps.js` stores map layouts and build slots, `tower.js` manages tower behaviour and upgrade values, and `enemy.js` handles enemy movement and boss behaviour. In addition, `game_systems.js` manages waves, gold, player life and victory or defeat checks, while `towereffect.js` handles combat effects such as arrows, lasers, cannon bombs and explosions. Other supporting systems, including sound, pause control, speed control and tutorial guidance, are placed in separate files. This made the project easier to develop in parallel, even though `sketch.js` still became larger than we originally expected.
+The code is also separated by responsibility. `tower.js` handles tower behaviour, `enemy.js` handles enemies and boss logic, `game_systems.js` manages waves and level state, `maps.js` stores map data, and `towereffect.js` handles projectiles and visual effects. This structure made development easier, although `sketch.js` still became larger than we originally planned.
 
 ## 3.2 Class Diagram
 
-The class diagram below summarises the main static structure of the game. It is based on the actual code rather than an ideal design only. Some parts, such as `Tower` and `Enemy`, are implemented as classes in the project. Others, like wave management and sound control, are closer to modules or controller-style responsibilities. We kept them in the diagram because they still play an important role in how the game is organised.
+The class diagram below shows the main static structure of the game. Some parts, such as `Tower` and `Enemy`, are implemented as JavaScript classes. Other parts, such as `WaveSystem` and `SoundSystem`, are closer to modules or controller responsibilities, but they are still included because they show how the game is organised.
 
-The most central gameplay class is `Tower`, defined in `tower.js`. It stores information such as position, tower type, level, range, damage and cooldown. More importantly, it also handles behaviour. A tower can upgrade itself, search for enemies, choose different targets depending on its type, and attack when the cooldown allows it. Since our four main tower types behave differently, putting this logic inside the class made the code easier to follow.
+`Tower` is defined in `tower.js`. It stores position, type, level, range, damage and cooldown, and it also handles upgrading, targeting and attacking. Different tower types use different targeting rules, so this class became one of the most important parts of the game logic.
 
-`Enemy`, defined in `enemy.js`, is the main class on the other side of combat. It stores movement, health, resistances and path progress, but it also includes behaviour such as taking damage, updating position and applying slow effects. In our game, enemy behaviour is not completely uniform. Boss enemies add more complex logic, including special movement and abilities, so the `Enemy` class ended up carrying both ordinary enemy behaviour and boss-related extensions.
+`Enemy` is defined in `enemy.js`. It stores movement, health, resistances and path progress. Normal enemies use simpler behaviour, while the boss adds extra states such as splitting, reviving and attacking towers.
 
-The combat effect classes are grouped in `towereffect.js`. These include `ArrowProjectile`, `Laser`, `CannonBomb`, and several short-lived effect classes such as `ExplosionEffect`, `ArrowHitEffect`, `MagicHitEffect`, `TowerUpgradeEffect` and `TowerSellEffect`. These objects are temporary. They are created during battle, shown for a short period, and then removed. Separating them from `Tower` and `Enemy` helped keep combat feedback more readable.
-
-Functions in `game_systems.js` manage wave progression, enemy spawning and victory or defeat checks. Strictly speaking, this part is more procedural than object-oriented, but in the diagram it is still useful to show it as a system-level component because towers and enemies both depend on the larger game flow. The same applies to sound and scene control: they are not the heart of combat, but they support the overall architecture.
-
-This design is not highly abstract, and that was intentional. For a browser game built with p5.js, a flatter structure suited the project better than a complicated inheritance hierarchy. It was easier to debug, easier to extend, and easier for the whole group to understand.
+Combat effects are kept in `towereffect.js`. Classes such as `ArrowProjectile`, `Laser`, `CannonBomb` and `ExplosionEffect` are temporary objects created during attacks and removed after their animation or damage is finished. This kept visual feedback separate from the tower and enemy classes.
 
 ```mermaid
 classDiagram
@@ -360,13 +356,14 @@ classDiagram
     CannonBomb --> ExplosionEffect : triggers
     WaveSystem --> Enemy : spawns
 ```
+
 <p align="center">
   <strong>Figure 7: Class diagram showing the main classes, modules and relationships in Sunnyvale Gate.</strong>
 </p>
 
 ## 3.3 Behavioural Diagram
 
-The behavioural diagram shows the main flow of the game from the player’s point of view. The player starts on the home screen, enters the comic introduction, selects a level, and then moves into gameplay. This follows the same `gameState` structure described in the system architecture.
+The behavioural diagram shows the main flow from the player’s point of view. The player starts on the home screen, enters the comic introduction, selects a level and then moves into gameplay. This follows the same `gameState` structure used in the system architecture.
 
 <p align="center">
   <img width="1448" height="1086" alt="Sequence Diagram" src="https://github.com/user-attachments/assets/d7aa5286-a03b-4526-af83-febf6b36467e" />
@@ -376,23 +373,21 @@ The behavioural diagram shows the main flow of the game from the player’s poin
   <strong>Figure 8: Sequence diagram showing the main gameplay flow.</strong>
 </p>
 
-Once a level starts, the system loads the selected map and begins the wave process. Player actions such as placing or upgrading towers are not only visual updates. The game also checks **valid tower slots**, available **gold**, and the current scene state before changing the active objects.
+Once a level starts, the system loads the selected map and begins the wave process. When the player places or upgrades a tower, the game checks the tower slot, available **gold** and current scene state before changing active objects.
 
-The diagram also helped us understand the repeated combat loop. Enemies spawn and move along the path, while towers search for targets and attack enemies in range. At the same time, the system updates projectiles, effects, player health and win-or-loss conditions. Even though these parts are split across different files in the code, they need to work together every frame.
+The diagram also helped us see the repeated combat loop more clearly. Enemies move along the path, towers search for targets, projectiles and effects update, and the game checks health and victory or defeat conditions. Although these systems are split across different files, they must work together every frame.
 
-Pause control is included because it interrupts this normal loop. When the pause menu opens, gameplay updates need to stop, but the menu itself still has to respond to player input. This showed us that scene control and gameplay logic are connected, not completely separate.
-
-Overall, the behavioural diagram helped us check whether the design supported a full player journey, from opening the game to reaching victory or defeat.
+Pause control is included because it interrupts normal gameplay. When the pause menu opens, gameplay updates stop, but the menu still needs to respond to input. This showed that scene control and gameplay logic are connected.
 
 ## 3.4 Design Reflection
 
-Overall, the design was simple but practical. Using p5.js meant that a repeated frame update was natural, so the `draw()` loop became a clear place to update enemies, towers, effects and game state. This matched the type of game we were building.
+The design was simple, but it suited the project. p5.js already uses a repeated update loop, so `draw()` became a natural place to update enemies, towers, effects and game state.
 
-The strongest part of the design was the data-driven structure. Tower statistics, enemy values, map routes and wave configurations were stored separately from most of the gameplay logic. This made balancing easier after testing, because we could adjust values such as **damage**, **range**, **health**, **speed** and **spawn timing** without rewriting the whole system.
+The strongest part of the design was the data-driven structure. Tower statistics, enemy values, map routes and wave configurations were stored separately from most gameplay logic. This made balance changes easier after testing.
 
-The modular file structure also helped the team work more clearly. For example, tower behaviour, enemy behaviour, wave control, sound and UI support were placed in different files. This made the project easier to understand than putting everything into one script.
+The modular file structure also helped the team work more clearly. Tower behaviour, enemy behaviour, wave control, sound and UI support were placed in different files instead of one large script.
 
-The main weakness was that `sketch.js` still became too large by the end of the project. It handled scene switching, player input, UI actions and some gameplay control at the same time. If we continued development, we would split scene management and UI interaction into separate modules. This would make the central game loop easier to read and reduce the risk of small UI changes affecting unrelated gameplay logic.
+The main weakness was that `sketch.js` still became too large by the end of the project. It handled scene switching, player input, UI actions and some gameplay control at the same time. If we continued development, we would split scene management and UI interaction into smaller modules.
 
 # Implementation
 
