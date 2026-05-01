@@ -317,17 +317,23 @@ classDiagram
 
 ## 3.3 Behavioural Diagram
 
+The behavioural diagram shows the main interaction flow during the game. It starts from the player’s point of view: the player opens the game, enters the comic introduction, selects a level, and then moves into the gameplay scene. This matches the `gameState` flow described in the system architecture.
+
 <p align="center">
   <img width="1448" height="1086" alt="Sequence Diagram" src="https://github.com/user-attachments/assets/d7aa5286-a03b-4526-af83-febf6b36467e" />
 </p>
 
 <p align="center">
-  <strong>Figure 6: Sequence diagram showing the main gameplay flow.</strong>
+  <strong>Figure 7: Sequence diagram showing the main gameplay flow.</strong>
 </p>
 
-The sequence diagram shows the game from the player’s point of view. The player starts from the home screen, moves through the comic introduction and level selection, and then enters a map. Once the level begins, the system loads the map, starts enemy waves and updates the battle continuously.
+Once a level begins, the system loads the selected map and starts the wave process. During the level, the player can place or upgrade towers. These actions are not handled as simple visual changes: the system also checks tower slots, player **gold**, and the current game state before updating the game objects.
 
-During gameplay, the player can place or upgrade towers. The system then checks the player’s gold, creates or updates the tower, and lets the tower attack enemies in range. The loop continues until the village is destroyed or all required waves are cleared. This diagram was useful because it showed the flow between the player, UI, map loading, wave system, towers and enemies, rather than only showing isolated objects.
+The diagram also shows the repeated combat loop. Enemies spawn and move along the path, while towers search for targets and attack enemies in range. At the same time, the system updates projectiles, effects, player health and win-or-loss conditions. This was useful for our design because it showed how different parts of the game depend on each other. For example, tower behaviour, enemy movement and wave progression are separate in the code, but they have to work together every frame.
+
+The pause function is included in the diagram because it interrupts the normal gameplay loop. When the player opens the pause menu, the game needs to stop or freeze gameplay updates while still allowing menu interaction. This reminded us that scene control and gameplay logic could not be treated as completely separate.
+
+Overall, the behavioural diagram helped us check that the design supported a full player journey, not just isolated features. It connected the UI, map loading, wave system, towers, enemies and result screens into one flow.
 
 ## 3.4 Design Reflection
 
