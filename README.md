@@ -492,14 +492,54 @@ The SUS results shown in the table indicate that the usability score has been co
 ## How code was tested
 
 ### White box
-The white-box testing in this project focuses on the internal game logic instead of the visual interface. The test page resets the main game variables before each test, including enemies, towers, player gold, player life, wave indexes, spawn queues, and frame count. It then creates controlled objects, such as test paths, towers, and enemies, and directly calls the same methods used during gameplay. For example, it tests whether towers upgrade correctly depending on the current map, whether cannon towers ignore flying enemies, whether ice towers prioritise unslowed ground enemies, whether physical and magic resistance affect damage correctly, and whether split enemies create child enemies after death. It also checks the wave system by testing startWave() and spawnCurrentWave() to make sure enemies are added to the game at the correct time. This makes it possible to find logic errors in the core systems before testing the full game through normal player interaction.
+
+The white-box testing in this project focused on the internal game logic rather than the visual interface. We created a separate `whitebox_tests.html` page with `whitebox_tests.js`, so that key systems could be tested in a controlled environment. Before each test, the script resets important variables, including `enemies`, `towers`, `playerGold`, `playerLife`, wave indexes, spawn queues and frame count. This gave every test a clean starting point instead of relying on whatever happened during normal gameplay.
+
+<p align="center">
+  <img src="docs/assets/evaluation_whitebox_testing.gif" alt="White-box testing flow" width="850" />
+</p>
+
+<p align="center">
+  <strong>Figure 13: White-box testing flow using controlled game objects and direct method calls.</strong>
+</p>
+
+The tests then create controlled objects, such as test paths, towers and enemies, and directly call the same methods used in the game. For example, we tested whether towers upgrade correctly on different maps, whether Cannon Towers ignore flying enemies, whether Ice Towers prioritise unslowed ground enemies, and whether physical and magic resistance affect damage correctly. We also tested the wave system by calling `startWave()` and `spawnCurrentWave()` to check whether enemies were added at the correct time.
+
+<p align="center">
+  <img src="docs/assets/evaluation_whitebox_code_examples.png" alt="White-box code examples" width="900" />
+</p>
+
+<p align="center">
+  <strong>Figure 14: Examples of white-box tests for tower targeting and wave logic.</strong>
+</p>
+
+This made it possible to find logic errors in the core systems before testing the full game through normal player interaction.
 
 ### Black box
-Throughout the development process, we have been conducting black box testing, focusing on interacting with the game from the player's perspective to verify if the functionality is working as expected. This method helped us identify and solve several key problems.
-Firstly, the background image does not match the actual walkable path. Testers found that the area shown in the background image as a road differed from the walkable path by a certain distance, causing enemies to directly pass through terrain that was not suitable for walking. We have readjusted the collision and visual layers of each map to ensure that the enemy's path perfectly matches the visual background.
-Secondly, there have been cases where testers clicked on the UI to build defense towers but nothing happened. After fixing the UI logic, all buttons reliably triggered the build and upgrade operations.
-Thirdly, the game is unbalanced - monsters are too difficult to deal with. Feedback indicates that early enemies had excessively high health values; Even with correctly placed towers, it is difficult for players to kill them, which greatly damages the experience. Based on the test data, we adjusted the enemy's health and the damage of the defense tower to make the difficulty curve smoother, challenging but not discouraging.
-Through this black box test, we not only verified the basic playability of the game, but also collected valuable player feedback. After each fix, we will rerun the relevant test cases to ensure that the issue is truly resolved and no new errors are introduced. This lays a solid foundation for providing stable and enjoyable tower defense games.
+
+Black-box testing was done throughout development by playing the game from the player’s point of view. Instead of checking the code directly, testers interacted with the game normally: choosing levels, placing towers, upgrading them, pausing the game and trying to complete each map. This helped us find problems that were difficult to notice from the code alone.
+
+<p align="center">
+  <img src="docs/assets/evaluation_blackbox_playtesting.gif" alt="Black-box playtesting loop" width="850" />
+</p>
+
+<p align="center">
+  <strong>Figure 15: Black-box playtesting loop for finding playability and balance issues.</strong>
+</p>
+
+One issue was that the background road did not always match the actual walkable path. In some maps, enemies appeared to pass through terrain that did not look suitable for walking, so we adjusted the route data and visual alignment. Another issue was UI response. Sometimes testers clicked the build or upgrade buttons, but nothing happened. After fixing the click handling, the tower menu became more reliable.
+
+Balance was another important part of black-box testing. Early versions had enemies with very high health, which made some waves feel unfair even when players placed towers correctly. Based on playtesting feedback, we adjusted enemy health, tower damage, gold rewards and wave timing. The aim was not to remove challenge, but to make the difficulty curve smoother and less frustrating.
+
+<p align="center">
+  <img src="docs/assets/evaluation_blackbox_findings.png" alt="Black-box findings and fixes" width="900" />
+</p>
+
+<p align="center">
+  <strong>Figure 16: Main black-box findings and fixes from playtesting.</strong>
+</p>
+
+After each fix, we replayed the relevant parts of the game to check whether the issue had really been solved and whether new problems had been introduced. This helped us improve the basic playability of the game and made the final version more stable.
 
 
 # Process 
