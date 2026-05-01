@@ -692,8 +692,6 @@ In addition to learning new logic patterns, we used AI to improve the structure 
 
 We also used AI to better understand some JavaScript and p5.js concepts. These included array traversal, filtering candidate objects, distance calculations such as `dist()` and `Math.hypot()`, frame-based timing using `frameCount`, state flags such as `dead`, `reachedEnd` and `bossPhase`, and object-based configuration data.
 
-For the report, AI was used mainly to help us think about structure and clarity. We asked questions such as: **what should this section show to the teacher and players?**, **how can we explain this design decision more clearly?**, and **which implementation details are worth highlighting?** AI helped us organise the report outline and improve the flow between requirements, design, implementation, testing and process. However, the project details, screenshots, reflections and final content choices were based on our own work and team discussion.
-
 Finally, we used AI to check English grammar, vocabulary and sentence expression. Since the report is written in English, we sometimes asked for advice on clearer wording, more accurate academic expressions, and better sentence structures. The purpose was to communicate our own work more precisely, not to replace our understanding.
 
 Overall, AI supported our learning, visual exploration, code organisation and report writing. It helped us understand unfamiliar concepts and express our work more clearly. However, all core gameplay ideas, design decisions, implementation choices, testing, evaluation and final project content were completed by the team.
