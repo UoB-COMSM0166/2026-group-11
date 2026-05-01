@@ -314,6 +314,7 @@ classDiagram
     WaveSystem --> Enemy : spawns
 ```
 
+
 ## 3.3 Behavioural Diagram
 
 <p align="center">
