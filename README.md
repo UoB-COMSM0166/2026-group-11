@@ -390,11 +390,11 @@ The main weakness was that `sketch.js` still became too large by the end of the 
 
 # Implementation
 
-The game was implemented as a browser-based p5.js project. The main flow is controlled by `sketch.js`, where `preload()`, `setup()`, `draw()` and `mousePressed()` handle asset loading, initial setup, frame updates and player input. Around this file, we separated the main systems into smaller scripts: `tower.js` for tower behaviour, `enemy.js` for enemies and boss logic, `game_systems.js` for waves and level state, and `towereffect.js` for projectiles and combat effects.
+The game was implemented as a browser-based p5.js project. The main flow is controlled by `sketch.js`, where `preload()`, `setup()`, `draw()` and `mousePressed()` handle asset loading, setup, frame updates and player input. Around this file, we separated the main systems into smaller scripts: `tower.js` for tower behaviour, `enemy.js` for enemies and boss logic, `game_systems.js` for waves and level state, and `towereffect.js` for projectiles and combat effects.
 
-The game is partly data-driven. Tower costs and upgrades are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Enemy values come from `ENEMY_TYPES`, while map routes and build slots are loaded from `maps.js`. Wave content is defined in `LEVEL_WAVE_CONFIGS`. This made balancing easier, because we could adjust **damage**, **range**, **health**, **speed** and **spawn timing** without rewriting the whole gameplay loop.
+The game is partly data-driven. Tower costs and upgrades are stored in `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`. Enemy values come from `ENEMY_TYPES`, map routes and build slots are loaded from `maps.js`, and wave content is defined in `LEVEL_WAVE_CONFIGS`. This made balancing easier because values such as **damage**, **range**, **health**, **speed** and **spawn timing** could be changed without rewriting the main gameplay loop.
 
-The final version supports the complete tower defence flow: the player can select a level, place towers on valid slots, upgrade them, fight waves, earn gold, lose health, and reach victory or defeat. The three most important implementation challenges were special tower targeting, boss behaviour, and data-driven balancing.
+The final version supports the complete tower defence flow: selecting a level, placing towers, upgrading them, fighting waves, earning gold, losing health, and reaching victory or defeat. The main technical challenges were tower-specific targeting, boss behaviour, and data-driven balancing.
 
 ## Challenge 1: Different defence towers
 
@@ -402,9 +402,7 @@ The final version supports the complete tower defence flow: the player can selec
 
 The Ice Tower was not implemented as a normal tower with a slow effect simply added to it. If it always attacked the nearest enemy, it could keep slowing the same target while other enemies passed through unaffected. To avoid this, we added `findBestIceTarget()` in `tower.js`.
 
-This method separates enemies in range into two groups: **unslowed enemies** and **slowed enemies**. If any unslowed enemy is available, the tower chooses the nearest one from that group. Only when all available targets are already slowed does it fall back to slowed enemies. The helper method `isEnemySlowed()` checks status values such as `slowTimer`, so the tower can make a better decision during a wave.
-
-This made the Ice Tower feel more like a support tower. It spreads the slow effect across the enemy wave instead of wasting attacks on targets that are already slowed.
+This method separates enemies in range into **unslowed enemies** and **slowed enemies**. If any unslowed enemy is available, the tower chooses the nearest one from that group. Only when all available targets are already slowed does it fall back to slowed enemies. The helper method `isEnemySlowed()` checks status values such as `slowTimer`, allowing the tower to make a better support decision during a wave.
 
 <p align="center">
   <img src="docs/assets/implementation_ice_tower_targeting.png" alt="Ice tower targeting logic" width="900" />
@@ -416,11 +414,9 @@ This made the Ice Tower feel more like a support tower. It spreads the slow effe
 
 ### Cannon Tower splash targeting
 
-The Cannon Tower also needed its own targeting rule. Since it deals area damage, attacking the nearest enemy was not always the best choice. In `tower.js`, we implemented `findBestSplashTarget()` so that the cannon could search for the densest group of enemies.
+The Cannon Tower also needed its own targeting rule. Since it deals area damage, attacking the nearest enemy was not always the best choice. In `tower.js`, we implemented `findBestSplashTarget()` so the cannon could search for the densest group of enemies.
 
-The method first collects enemies inside tower range. Then it checks each candidate enemy and counts how many other enemies would be hit within the splash radius. The enemy with the highest count becomes the target. If two candidates have the same score, the closer one is chosen.
-
-This gave the Cannon Tower a clearer gameplay role. It behaves differently from single-target towers and becomes especially useful when enemies are grouped together.
+The method first collects enemies inside tower range. Then, for each candidate enemy, it counts how many other enemies would be hit within the splash radius. The enemy with the highest count becomes the target. If two candidates have the same score, the closer one is chosen. This made the Cannon Tower behave differently from single-target towers and gave it a clear role during dense waves.
 
 <p align="center">
   <img src="docs/assets/implementation_cannon_tower_targeting.png" alt="Cannon tower splash targeting" width="900" />
@@ -438,8 +434,6 @@ The King Slime boss was the most complex enemy in the game. A normal enemy only 
 
 This logic is mainly handled in `enemy.js`. In `takeDamage()`, the code checks whether the boss still has revives left. If `reviveCount` is below `maxRevives`, the boss enters `startBossFragmenting()` instead of being marked as dead. This stores the death position, changes `bossPhase` to `"fragmenting"`, and creates fragment objects through `initBossFragments()`.
 
-The difficult part was that this was not just a visual effect. The game had to pause the normal boss state, update fragments for a short time, and then bring the boss back without breaking the path, wave or health logic.
-
 <p align="center">
   <img src="docs/assets/implementation_boss_split_revive.png" alt="Boss split and revive mechanic" width="900" />
 </p>
@@ -450,11 +444,9 @@ The difficult part was that this was not just a visual effect. The game had to p
 
 ### Boss targeting the most valuable tower
 
-The boss also has an active tower attack. Instead of choosing randomly, it searches for the most valuable tower in range. This makes the boss more threatening because it can punish the player’s strongest investment.
+The boss also has an active tower attack. Instead of choosing randomly, it searches for the most valuable tower in range, which makes the boss more threatening because it can punish the player’s strongest investment.
 
-Each tower records `totalSpent`, which includes its build cost and upgrade cost. The method `findHighestValueTowerInRange()` loops through the `towers` array, checks which towers are inside the boss attack range, compares their value, and selects the highest-value target. If two towers have the same value, distance is used as a tie-breaker.
-
-This feature connected boss behaviour with the economy system. It also changed player strategy, because upgrading one tower heavily could make it a more likely boss target.
+Each tower records `totalSpent`, including its build cost and upgrade cost. The method `findHighestValueTowerInRange()` loops through the `towers` array, checks which towers are inside the boss attack range, compares their value, and selects the highest-value target. If two towers have the same value, distance is used as a tie-breaker. This connected boss behaviour with the economy system and changed how players thought about upgrading one tower heavily.
 
 <p align="center">
   <img src="docs/assets/implementation_boss_targeted_attack.png" alt="Boss attack on the most expensive tower" width="900" />
@@ -466,13 +458,13 @@ This feature connected boss behaviour with the economy system. It also changed p
 
 ## Challenge 3: Data-driven balancing and wave configuration
 
-The third challenge was keeping the game adjustable as more enemies, towers and levels were added. Instead of putting all values directly inside the main game loop, we stored most balance values in configuration objects. Tower prices and upgrade statistics are handled through `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`, while enemy health, speed, resistance and rewards are stored in `ENEMY_TYPES`. Wave patterns are defined separately in `LEVEL_WAVE_CONFIGS`.
+A third challenge was keeping the game balance adjustable while the game grew. Instead of placing all balance values directly inside the main loop, we stored key values in configuration objects. Tower prices and upgrades are defined through `TOWER_COST`, `TOWER_UPGRADE_COSTS` and `TOWER_LEVEL_STATS`, while enemy health, speed, resistance and rewards are stored in `ENEMY_TYPES`.
 
-This structure made repeated balancing much easier. If one wave felt too difficult, we could adjust enemy health, tower damage, gold rewards or spawn timing without changing the logic of `draw()`, `Tower.update()` or `spawnCurrentWave()`. It also made the code easier for different team members to understand, because the gameplay numbers were separated from the behaviour that uses them.
+Wave design is also separated from the main gameplay loop. Each level uses `LEVEL_WAVE_CONFIGS` to define enemy types, spawn timing and wave structure. This made it easier to test changes quickly. For example, if one wave felt too hard, we could adjust enemy health, gold rewards or spawn intervals without changing tower, enemy or rendering code.
 
-This was especially useful near the end of development, when playtesting showed that some enemies were too strong and some waves created sudden difficulty spikes. By changing the configuration data, we could smooth the difficulty curve while keeping the same core systems.
+This structure was important for teamwork as well. Different members could tune values, test levels and discuss balance without editing the same large function. It also made the final game easier to extend, since future levels could be added by writing new map and wave data rather than rebuilding the whole system.
 
-Overall, the implementation met the main requirements and produced a complete playable tower defence game. The special tower targeting and boss mechanics were the main technical challenges because they required more than simple movement or damage values. They also made the final game feel more strategic and distinctive.
+Overall, the implementation met the main requirements and produced a complete playable tower defence game. The special tower targeting, boss mechanics and data-driven configuration made the game more strategic, but they also made the code more complex to organise and test.
 
 
 # Evaluation
