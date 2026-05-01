@@ -85,14 +85,17 @@ Our main twist is that the game uses a cosy farming-game atmosphere while adding
 # Requirements
 ## 2.1 Early stages design
 
-At the very beginning of the project, we held several online meetings to share our ideas for games. Tower defense and rhythm games were the directions we initially considered. Until the third week, our plan was to create a multiplayer online tower defense game where each player could build defense towers and deploy attacking soldiers. We used PowerPoint to create paper prototypes, and we tried sketching our ideas on paper, but the results didn't quite satisfy everyone.
+At the beginning of the project, we held several online meetings to share possible game ideas. The two directions we discussed most were a rhythm game and a tower defence game. We were more confident with the tower defence idea because it had a clearer structure: enemies follow a path, players place towers, and the game has a simple win-or-lose goal.
 
-This is our prototypes.
+Our early plan was more ambitious than the final version. Until around the third week, we planned to make a multiplayer online tower defence game, where each player could build defensive towers and deploy attacking units. To explore this idea, we used PowerPoint to make a simple prototype and also sketched some layouts on paper. These prototypes helped us discuss the idea more clearly, even though they also showed that the design was not yet practical enough.
 
-https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890
+[Watch the early prototype video](https://github.com/user-attachments/assets/f44697fe-5f10-425b-bfe4-ec8478d52890)
 
-During later discussions, we realized that developing a multiplayer online tower defense game would be too challenging for us, as we had no prior game development experience. After several review meetings, we finally decided to create a tower defense game in the style of Kingdom Rush.
-Over the next few weeks, we used stakeholders, epics, user stories, and acceptance criteria to clarify what players wanted to experience in our game. We also created a use case diagram to define the game’s overall workflow to guide future development.
+**Figure 1: Early prototype used to discuss the original multiplayer tower defence idea.**
+
+During later discussions, we realised that the multiplayer version would be difficult to complete within the time available, especially because our group had little previous experience with game development. Online synchronisation, competitive balancing and multiplayer interaction rules would have added too much risk before we had finished the basic tower defence loop. Because of this, we reduced the scope and decided to build a single-player tower defence game inspired by *Kingdom Rush*.
+
+Over the following weeks, we used stakeholders, epics, user stories and acceptance criteria to make the game requirements clearer. This helped us move from a general idea to a set of features that could actually be implemented, such as level selection, tower placement, enemy waves, gold rewards and tower upgrades. We also created a use case diagram to describe the overall player workflow and to guide the later design and implementation work.
 
 ## 2.3 Stakeholders
 
