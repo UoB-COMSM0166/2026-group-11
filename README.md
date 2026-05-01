@@ -683,8 +683,6 @@ Looking forward, there are several improvements we would make to the current gam
 
 # AI Statement
 
-This course allows the use of AI, so we would like to explain our use of AI honestly.
-
 In this project, we used AI tools as learning and support tools, not as a replacement for our own design, coding or testing work. The main AI tool we used was ChatGPT, and we also used AI drawing tools to support part of the visual asset creation process.
 
 For visual design, AI drawing tools were used to help us explore possible background images, visual styles and reference ideas. However, many in-game assets were still drawn or edited by our team members using a tablet, including slimes, defensive towers and some attack effects. AI helped us save time during early visual exploration, but the final selection, adjustment and integration of assets were completed by the team.
